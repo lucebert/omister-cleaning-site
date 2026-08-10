@@ -30,6 +30,7 @@ export default function Home() {
               <li>Déplacement dans toute l'Île-de-France</li>
               <li>Sur rendez-vous, devis en 5 minutes</li>
             </ul>
+            <p className="hero-quote">« Elle est comme neuve, vraiment rien à dire. » <span>— avis client, <a href="#avis">voir les avis</a></span></p>
           </div>
           <div className="hero-proof">
             <div className="hero-proof-frame">
@@ -216,7 +217,7 @@ export default function Home() {
 
       <section className="section-white">
         <div className="section-head">
-          <h2 className="section-title">Comment on travaille</h2>
+          <h2 className="section-title">Comment travaille-t-on ?</h2>
         </div>
         <div className="why-grid">
           <div className="why-card">
@@ -240,6 +241,7 @@ export default function Home() {
             <p>Les avant/après sont sur <a href="https://www.instagram.com/o_mister_cleaning" target="_blank" rel="noopener">@o_mister_cleaning</a>.</p>
           </div>
         </div>
+        <p className="section-quote">« Merci pour la prestation, délai et devis respectés — et merci pour ta ponctualité. » <span>— avis client</span></p>
       </section>
 
       <section id="zone" className="section-white">
@@ -267,6 +269,10 @@ export default function Home() {
           <details className="faq-item">
             <summary>Comment se passe la réservation ?</summary>
             <p>On fixe ensemble un créneau, puis un acompte vient le confirmer. Les modalités exactes vous sont précisées au moment du devis, avant tout engagement.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Le prix peut-il augmenter après le devis ?</summary>
+            <p>Non. Les tarifs affichés sont des prix de départ, mais une fois votre devis établi, c'est ce montant-là que vous payez — pas de surprise à la fin de l'intervention. « Délai et devis respectés », résume un client.</p>
           </details>
           <details className="faq-item">
             <summary>Où intervenez-vous ?</summary>
@@ -317,6 +323,7 @@ export default function Home() {
           <div className="cta-panel">
             <h3>Un devis en 5 minutes</h3>
             <p>Décrivez-nous votre besoin par téléphone ou message Instagram : nous vous répondons avec un tarif clair, sans engagement.</p>
+            <p className="cta-quote">« Je vais passer que par vous maintenant. »</p>
             <a className="btn btn-primary" href="tel:0610133642">Appeler le 06 10 13 36 42</a>
           </div>
         </div>

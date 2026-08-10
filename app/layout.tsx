@@ -89,6 +89,14 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
+                  name: "Le prix peut-il augmenter après le devis ?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Non. Les tarifs affichés sont des prix de départ, mais une fois votre devis établi, c'est ce montant-là que vous payez — pas de surprise à la fin de l'intervention.",
+                  },
+                },
+                {
+                  "@type": "Question",
                   name: "Où intervenez-vous ?",
                   acceptedAnswer: {
                     "@type": "Answer",

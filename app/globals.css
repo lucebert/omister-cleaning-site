@@ -538,3 +538,20 @@
   .review-card blockquote::after{content:" »";color:var(--ocean);}
   .review-card figcaption{margin-top:14px;font-size:0.85rem;color:var(--navy);}
   .review-card .review-meta{display:block;color:var(--muted);font-size:0.78rem;margin-top:2px;}
+
+  /* ===== Citations d'avis ===== */
+  .hero-quote{
+    margin-top:22px;font-style:italic;color:var(--ink);font-size:0.95rem;
+    border-left:2px solid var(--cyan);padding-left:14px;max-width:480px;
+  }
+  .hero-quote span{font-style:normal;color:var(--muted);font-size:0.8rem;display:block;margin-top:2px;}
+  .hero-quote span a{color:var(--ocean);text-decoration:underline;}
+  .section-quote{
+    text-align:center;margin:44px auto 0;max-width:560px;
+    font-style:italic;color:var(--ink);font-size:1rem;
+  }
+  .section-quote span{font-style:normal;color:var(--muted);font-size:0.8rem;display:block;margin-top:4px;}
+  .cta-quote{
+    font-style:italic;color:#fff;font-size:0.95rem;
+    border-left:2px solid var(--cyan);padding-left:12px;
+  }
