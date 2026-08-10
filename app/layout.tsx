@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://omistercleaning.fr"),
+  alternates: { canonical: "/" },
   title:
     "O'Mister Cleaning — Nettoyage & Location de camion utilitaire en Île-de-France",
   description:
