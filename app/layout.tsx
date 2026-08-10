@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://omistercleaning.fr"),
   alternates: { canonical: "/" },
   title:
-    "O'Mister Cleaning — Nettoyage & Location de camion utilitaire en Île-de-France",
+    "O'Mister Cleaning — Nettoyage professionnel auto, mobilier & habitation en Île-de-France",
   description:
-    "O'Mister Cleaning à Pontoise : location de camion utilitaire (avec ou sans chauffeur) et nettoyage professionnel auto, mobilier, habitation en Île-de-France. Devis rapide au 06 10 13 36 42.",
+    "O'Mister Cleaning à Pontoise : nettoyage professionnel auto, mobilier et habitation en Île-de-France, et location de camion utilitaire avec ou sans chauffeur. Devis rapide au 06 10 13 36 42.",
 };
 
 export default function RootLayout({
@@ -23,18 +23,18 @@ export default function RootLayout({
       <head>
         <meta
           property="og:title"
-          content="O'Mister Cleaning — Location de camion & nettoyage professionnel"
+          content="O'Mister Cleaning — Nettoyage professionnel & location de camion"
         />
         <meta
           property="og:description"
-          content="Camion utilitaire avec ou sans chauffeur, nettoyage auto, mobilier et habitation à Pontoise et en Île-de-France. Devis clair, intervention rapide."
+          content="Nettoyage professionnel auto, mobilier et habitation à Pontoise et en Île-de-France, et camion utilitaire avec ou sans chauffeur. Devis clair, intervention rapide."
         />
         <meta property="og:type" content="business.business" />
         <meta
           property="og:image"
           content="https://www.omistercleaning.fr/images/img-05.jpg"
         />
-        <link rel="icon" href="/images/img-12.png" />
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23081b33'/%3E%3Ctext x='30' y='45' font-family='Arial, sans-serif' font-weight='800' font-size='36' text-anchor='middle' fill='%23ffffff'%3EO%3C/text%3E%3Ccircle cx='47' cy='20' r='5' fill='%2300d4ff'/%3E%3C/svg%3E" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "O'Mister Cleaning",
               description:
-                "Location de camion utilitaire et nettoyage professionnel auto, mobilier et habitation à Pontoise et en Île-de-France.",
+                "Nettoyage professionnel auto, mobilier et habitation, et location de camion utilitaire, à Pontoise et en Île-de-France.",
               telephone: "+33610133642",
               email: "omister415@gmail.com",
               url: "https://www.omistercleaning.fr",

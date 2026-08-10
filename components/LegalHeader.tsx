@@ -3,10 +3,7 @@ export default function LegalHeader() {
     <header>
       <div className="nav wrap">
         <a className="brand" href="/">
-          <span className="brand-mark">
-            <img src="/images/img-12.png" alt="" width={50} height={50} />
-          </span>
-          O'Mister Cleaning
+          O'Mister&nbsp;<span className="brand-accent">Cleaning</span>
         </a>
         <a className="nav-cta" href="/">Retour au site</a>
       </div>

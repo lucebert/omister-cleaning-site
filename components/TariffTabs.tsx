@@ -3,14 +3,14 @@
 import { useState } from "react";
 
 const TABS = [
-  { id: "camion", label: "Location camion" },
   { id: "auto", label: "Automobile" },
   { id: "mobilier", label: "Mobilier & textiles" },
   { id: "habitation", label: "Habitation & pro" },
+  { id: "camion", label: "Location camion" },
 ];
 
 export default function TariffTabs() {
-  const [activeTab, setActiveTab] = useState("camion");
+  const [activeTab, setActiveTab] = useState("auto");
 
   const panelClass = (id: string) =>
     activeTab === id ? "tariff-panel active" : "tariff-panel";

@@ -18,7 +18,7 @@ Site vitrine + boutique d'O'Mister Cleaning, entreprise de Pontoise (95300) tenu
 
 ## Positioning
 
-Un seul prestataire local pour deux besoins habituellement séparés : la location de camion utilitaire (avec ou sans chauffeur) et le nettoyage professionnel (auto, mobilier/textiles, habitation/locaux). Prix d'entrée bas et annoncés à l'avance (« à partir de »), intervention rapide sur rendez-vous.
+Le nettoyage professionnel (auto, mobilier/textiles, habitation/locaux) est l'offre principale — c'est le nom de la marque et tout le contenu Instagram. La location de camion utilitaire (avec ou sans chauffeur) est l'offre complémentaire, jamais mise en avant en premier (décision de positionnement d'août 2026). Prix d'entrée bas et annoncés à l'avance (« à partir de »), intervention rapide sur rendez-vous.
 
 ## Operating Context
 
@@ -38,7 +38,7 @@ Un seul prestataire local pour deux besoins habituellement séparés : la locati
 ## Brand Commitments
 
 - Nom : O'Mister Cleaning. Gérant : Omar Kourouma.
-- Logo existant : `public/images/img-12.png` (rond, utilisé en sticker sur les photos produits).
+- Logo image existant : `public/images/img-12.png` (72×72px seulement — trop basse définition pour le header ; utilisé en sticker sur les photos produits et dans le JSON-LD). Sur le site, la marque s'affiche en wordmark typographique « O'Mister Cleaning » (Outfit 800, navy + ocean). Logo HD demandé à Omar.
 - Comptes : Instagram @o_mister_cleaning (canal principal), Snapchat omister233060.
 - Téléphone affiché partout : 06 10 13 36 42. Email actuel : omister415@gmail.com (migration vers contact@omistercleaning.fr envisagée).
 

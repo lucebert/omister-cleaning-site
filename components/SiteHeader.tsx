@@ -27,10 +27,7 @@ export default function SiteHeader() {
     <header>
       <div className="nav wrap">
         <a className="brand" href="/">
-          <span className="brand-mark">
-            <img src="/images/img-12.png" alt="" width={50} height={50} />
-          </span>
-          O'Mister Cleaning
+          O'Mister&nbsp;<span className="brand-accent">Cleaning</span>
         </a>
         <nav className={open ? "nav-links open" : "nav-links"} aria-label="Navigation principale">
           {LINKS.map((l) => (

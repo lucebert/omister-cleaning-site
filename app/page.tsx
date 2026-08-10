@@ -13,8 +13,8 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <h1 className="hero-title">Location de camion utilitaire <span className="accent">&</span> nettoyage professionnel.</h1>
-            <p className="hero-sub">Camion avec ou sans chauffeur pour vos déménagements et transports, nettoyage auto, mobilier, habitation et locaux professionnels : O'Mister Cleaning s'occupe de tout. Devis clair, intervention rapide.</p>
+            <h1 className="hero-title">Nettoyage professionnel auto, mobilier <span className="accent">&</span> habitation.</h1>
+            <p className="hero-sub">Sièges auto, canapés, matelas, tapis et sols nettoyés en profondeur au matériel professionnel, chez vous en Île-de-France. Besoin de transporter ? On loue aussi des camions utilitaires, avec ou sans chauffeur.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="tel:0610133642">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 12.9 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2Z"/></svg>
@@ -52,22 +52,11 @@ export default function Home() {
 
       <section id="services">
         <div className="section-head">
-          <h2 className="section-title">Location de camion & nettoyage, en un seul endroit</h2>
-          <p className="section-sub">Quatre domaines d'intervention, chacun détaillé ci-dessous pour que vous choisissiez la formule adaptée à votre besoin.</p>
+          <h2 className="section-title">Nos prestations</h2>
+          <p className="section-sub">Trois domaines de nettoyage, plus la location de camion utilitaire pour vos transports — choisissez la formule adaptée à votre besoin.</p>
         </div>
         <div className="offers">
 
-          <article className="offer">
-            <div className="offer-head">
-              <h3>Location de camions utilitaires</h3>
-              <span className="offer-price">À partir de 100€</span>
-            </div>
-            <p className="offer-desc">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
-            <dl className="offer-items">
-              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd></div>
-              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd></div>
-            </dl>
-          </article>
 
           <article className="offer">
             <div className="offer-head">
@@ -105,6 +94,18 @@ export default function Home() {
               <div><dt>Décapage</dt><dd>Retrait des couches de saleté incrustée et anciens traitements.</dd></div>
               <div><dt>Lustrage</dt><dd>Brillance et finition nette redonnées au sol.</dd></div>
               <div><dt>Récurage</dt><dd>Nettoyage en profondeur des sols très encrassés.</dd></div>
+            </dl>
+          </article>
+
+          <article className="offer">
+            <div className="offer-head">
+              <h3>Location de camions utilitaires</h3>
+              <span className="offer-price">À partir de 100€</span>
+            </div>
+            <p className="offer-desc">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
+            <dl className="offer-items">
+              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd></div>
+              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd></div>
             </dl>
           </article>
 
