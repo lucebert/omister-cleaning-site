@@ -1,6 +1,7 @@
 import CompareCard from "../components/CompareCard";
 import SiteHeader from "../components/SiteHeader";
 import Reviews from "../components/Reviews";
+import DevisSimulator from "../components/DevisSimulator";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
 import SiteFooter from "../components/SiteFooter";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <>
 <SiteHeader />
+      <DevisSimulator />
 
       <section className="hero">
         <div className="hero-grid">
@@ -16,10 +18,9 @@ export default function Home() {
             <h1 className="hero-title">L'intérieur de votre voiture, rendu <span className="accent">comme neuf</span>.</h1>
             <p className="hero-sub">Sièges, moquettes, plastiques, odeurs : nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France. Aussi : canapés, matelas, tapis — et location de camion utilitaire.</p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="tel:0610133642">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 12.9 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2Z"/></svg>
-                Demander un devis
-              </a>
+              <button className="btn btn-primary" type="button" data-devis-trigger>
+                Obtenir mon tarif →
+              </button>
               <a className="btn btn-ghost" href="https://www.instagram.com/o_mister_cleaning" target="_blank" rel="noopener">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
                 @o_mister_cleaning
