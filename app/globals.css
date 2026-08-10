@@ -143,7 +143,7 @@
   .btn-ghost:hover{border-color:var(--ocean);color:var(--ocean);}
   .btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px;}
   .hero-cta-note{
-    margin:-16px 0 26px;font-size:0.88rem;color:var(--muted);
+    margin:-16px 0 28px;font-size:0.88rem;color:var(--muted);
   }
   .hero-cta-note a{color:var(--navy);font-weight:700;text-decoration:underline;}
   .hero-facts{

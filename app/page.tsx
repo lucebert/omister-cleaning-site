@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <h1 className="hero-title">L'intérieur de votre voiture, rendu <span className="accent">comme neuf</span>.</h1>
-            <p className="hero-sub">Sièges, moquettes, plastiques, odeurs : nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France. Aussi : canapés, matelas, tapis — et location de camion utilitaire.</p>
+            <p className="hero-sub">Sièges, moquettes, plastiques, odeurs : nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France.</p>
             <div className="hero-actions">
               <button className="btn btn-primary" type="button" data-devis-trigger>
                 Obtenir mon tarif →
@@ -26,12 +26,7 @@ export default function Home() {
                 @o_mister_cleaning
               </a>
             </div>
-            <p className="hero-cta-note">Appel ou message au <a href="tel:0610133642">06 10 13 36 42</a> — réponse en 5 minutes, gratuit et sans engagement.</p>
-            <ul className="hero-facts">
-              <li>Basé à Pontoise (95300)</li>
-              <li>Déplacement dans toute l'Île-de-France</li>
-              <li>Particuliers et professionnels</li>
-            </ul>
+            <p className="hero-cta-note">Ou directement au <a href="tel:0610133642">06 10 13 36 42</a> — réponse en 5 minutes.</p>
             <p className="hero-quote">« Elle est comme neuve, vraiment rien à dire. » <span>— avis client, <a href="#avis">voir les avis</a></span></p>
           </div>
           <div className="hero-proof">
