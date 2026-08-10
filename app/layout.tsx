@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CartProvider } from "../components/cart/CartContext";
+import CartWidget from "../components/cart/CartWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://omistercleaning.fr"),
@@ -37,7 +39,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          {children}
+          <CartWidget />
+        </CartProvider>
+      </body>
     </html>
   );
 }

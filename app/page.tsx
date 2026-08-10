@@ -1,6 +1,6 @@
 import CompareCard from "../components/CompareCard";
 import TariffTabs from "../components/TariffTabs";
-import BuyButton from "../components/BuyButton";
+import AddToCartButton from "../components/cart/AddToCartButton";
 
 export default function Home() {
   return (
@@ -232,7 +232,7 @@ export default function Home() {
             <h3>APC Universel</h3>
             <p>Nettoyant tout-tissu concentré : sièges auto, tapis, matelas, canapés, sols. Le produit polyvalent que nous utilisons nous-mêmes en intervention.</p>
             <div className="shop-price">10€ <span>/ flacon</span></div>
-            <BuyButton stripeLink="REMPLACER_PAR_LIEN_STRIPE_APC" />
+            <AddToCartButton productId="apc" />
           </div>
 
           <div className="shop-card">
@@ -243,7 +243,7 @@ export default function Home() {
             <h3>Brosse de nettoyage</h3>
             <p>Petite brosse à poils souples, pensée pour faire pénétrer le produit dans les fibres sans les abîmer.</p>
             <div className="shop-price">5€ <span>/ unité</span></div>
-            <BuyButton stripeLink="REMPLACER_PAR_LIEN_STRIPE_BROSSE" />
+            <AddToCartButton productId="brosse" />
           </div>
 
           <div className="shop-card">
@@ -254,13 +254,13 @@ export default function Home() {
             <h3>Lingette microfibre</h3>
             <p>Fibre d'essuyage et de finition, pour un rendu sans traces après application du produit.</p>
             <div className="shop-price">1€ <span>/ unité</span></div>
-            <BuyButton stripeLink="REMPLACER_PAR_LIEN_STRIPE_FIBRE" />
+            <AddToCartButton productId="fibre" />
           </div>
         </div>
 
         <p className="shop-secure">
           <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Paiement 100% sécurisé par Stripe
+          Paiement 100% sécurisé par Mollie
         </p>
       </section>
 
