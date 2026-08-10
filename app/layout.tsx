@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { CartProvider } from "../components/cart/CartContext";
 import CartWidget from "../components/cart/CartWidget";
@@ -40,6 +41,11 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="2dc1a800-50a3-49e0-a589-83146eafd0e9"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
