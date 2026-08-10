@@ -1,6 +1,5 @@
 import CompareCard from "../components/CompareCard";
 import SiteHeader from "../components/SiteHeader";
-import TariffTabs from "../components/TariffTabs";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
 import SiteFooter from "../components/SiteFooter";
@@ -53,35 +52,36 @@ export default function Home() {
 
       <section id="services" className="section-tint">
         <div className="section-head">
-          <h2 className="section-title">Nos prestations</h2>
-          <p className="section-sub">Trois domaines de nettoyage, plus la location de camion utilitaire pour vos transports — choisissez la formule adaptée à votre besoin.</p>
+          <h2 className="section-title">Prestations & tarifs</h2>
+          <p className="section-sub">Trois domaines de nettoyage, plus la location de camion utilitaire. Tous les prix sont des prix de départ « à partir de », ajustés selon l'état, la taille et la complexité.</p>
         </div>
         <div className="offers">
-
 
           <article className="offer">
             <div className="offer-head">
               <h3>Nettoyage automobile</h3>
-              <span className="offer-price">À partir de 30€</span>
             </div>
             <p className="offer-desc">Trois formules selon le niveau de nettoyage recherché.</p>
             <dl className="offer-items">
-              <div><dt>Formule Express</dt><dd>Aspiration complète des moquettes, sièges et plastiques.</dd></div>
-              <div><dt>Formule Intégrale</dt><dd>Brossage mécanique, shampouineuse tissus/moquettes, plastiques et vitres.</dd></div>
-              <div><dt>Sièges seuls</dt><dd>Nettoyage en profondeur, taches et odeurs éliminées.</dd></div>
+              <div><dt>Formule Express</dt><dd>Aspiration complète des moquettes, sièges et plastiques.</dd><dd className="offer-row-price">À partir de 30€</dd></div>
+              <div><dt>Formule Intégrale</dt><dd>Brossage mécanique, shampouineuse tissus/moquettes, plastiques et vitres.</dd><dd className="offer-row-price">À partir de 50€</dd></div>
+              <div><dt>Sièges seuls</dt><dd>Nettoyage en profondeur, taches et odeurs éliminées.</dd><dd className="offer-row-price">À partir de 10€/siège</dd></div>
             </dl>
+            <p className="offer-note">Véhicules très sales ou familiaux : devis personnalisé.</p>
           </article>
 
           <article className="offer">
             <div className="offer-head">
               <h3>Mobilier & textiles</h3>
-              <span className="offer-price">À partir de 30€</span>
             </div>
-            <p className="offer-desc">Nettoyage en profondeur à la shampouineuse professionnelle.</p>
+            <p className="offer-desc">Nettoyage en profondeur à la shampouineuse professionnelle — taches, bactéries, acariens et odeurs éliminés.</p>
             <dl className="offer-items">
-              <div><dt>Fauteuil & tapis</dt><dd>Taches, bactéries, acariens et odeurs éliminés.</dd></div>
-              <div><dt>Matelas</dt><dd>Devis personnalisé selon la taille.</dd></div>
-              <div><dt>Canapé</dt><dd>2/3 places, d'angle, ou 5 places et plus — à partir de 70€.</dd></div>
+              <div><dt>Fauteuil</dt><dd className="offer-row-price">À partir de 30€</dd></div>
+              <div><dt>Tapis</dt><dd>Selon la taille.</dd><dd className="offer-row-price">À partir de 20€</dd></div>
+              <div><dt>Matelas</dt><dd>Devis personnalisé selon la taille.</dd><dd className="offer-row-price">Sur devis</dd></div>
+              <div><dt>Canapé 2/3 places</dt><dd className="offer-row-price">À partir de 70€</dd></div>
+              <div><dt>Canapé d'angle</dt><dd className="offer-row-price">À partir de 90€</dd></div>
+              <div><dt>Canapé 5 places et +</dt><dd className="offer-row-price">À partir de 100€</dd></div>
             </dl>
           </article>
 
@@ -96,18 +96,19 @@ export default function Home() {
               <div><dt>Lustrage</dt><dd>Brillance et finition nette redonnées au sol.</dd></div>
               <div><dt>Récurage</dt><dd>Nettoyage en profondeur des sols très encrassés.</dd></div>
             </dl>
+            <p className="offer-note">Terrasse, commerce, maison ou grandes surfaces moquette : devis selon la surface.</p>
           </article>
 
           <article className="offer">
             <div className="offer-head">
               <h3>Location de camions utilitaires</h3>
-              <span className="offer-price">À partir de 100€</span>
             </div>
             <p className="offer-desc">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
             <dl className="offer-items">
-              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd></div>
-              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd></div>
+              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd><dd className="offer-row-price">À partir de 100€</dd></div>
+              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd><dd className="offer-row-price">Sur devis</dd></div>
             </dl>
+            <p className="offer-note">Tarif selon durée, kilométrage et créneau souhaité.</p>
           </article>
 
         </div>
@@ -160,14 +161,6 @@ export default function Home() {
             caption="Tissu terni et taches disparues, assise retrouvée uniforme et propre."
           />
         </div>
-      </section>
-
-      <section id="tarifs" className="section-white">
-        <div className="section-head">
-          <h2 className="section-title">Les prix, annoncés avant d'intervenir</h2>
-          <p className="section-sub">Tous les tarifs indiqués sont des prix de départ (« à partir de »), ajustés selon l'état, la taille et la complexité de l'intervention.</p>
-        </div>
-        <TariffTabs />
       </section>
 
       <section id="boutique" className="section-tint">
