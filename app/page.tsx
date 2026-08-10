@@ -32,17 +32,20 @@ export default function Home() {
             </ul>
           </div>
           <div className="hero-proof">
-            <CompareCard
-              id={3}
-              bare
-              lazy={false}
-              afterSrc="/images/img-05.jpg"
-              afterAlt="Banquette de voiture après nettoyage"
-              beforeSrc="/images/img-06.jpg"
-              beforeAlt="Banquette de voiture avant nettoyage"
-              sliderLabel="Comparer avant et après - banquette de voiture"
-            />
-            <p className="hero-proof-caption">Banquette arrière, vraie intervention — faites glisser pour comparer.</p>
+            <div className="hero-proof-frame">
+              <CompareCard
+                id={2}
+                bare
+                lazy={false}
+                defaultValue={35}
+                afterSrc="/images/img-03.jpg"
+                afterAlt="Matelas après nettoyage"
+                beforeSrc="/images/img-04.jpg"
+                beforeAlt="Matelas avant nettoyage"
+                sliderLabel="Comparer avant et après - matelas"
+              />
+            </div>
+            <p className="hero-proof-caption">Matelas nettoyé en profondeur, vraie intervention — faites glisser pour comparer.</p>
           </div>
         </div>
       </section>
@@ -155,14 +158,14 @@ export default function Home() {
             caption="Taches profondes et poussière incrustée éliminées par brossage mécanique."
           />
           <CompareCard
-            id={2}
-            title="Matelas — nettoyage en profondeur"
-            afterSrc="/images/img-03.jpg"
-            afterAlt="Matelas après nettoyage"
-            beforeSrc="/images/img-04.jpg"
-            beforeAlt="Matelas avant nettoyage"
-            sliderLabel="Comparer avant et après - matelas"
-            caption="Taches et auréoles disparues, matelas assaini en profondeur."
+            id={3}
+            title="Banquette arrière — deuxième intervention"
+            afterSrc="/images/img-05.jpg"
+            afterAlt="Banquette de voiture après nettoyage"
+            beforeSrc="/images/img-06.jpg"
+            beforeAlt="Banquette de voiture avant nettoyage"
+            sliderLabel="Comparer avant et après - banquette de voiture"
+            caption="Housses très sales et poussiéreuses retrouvent tout leur éclat d'origine."
           />
           <CompareCard
             id={4}

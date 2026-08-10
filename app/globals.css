@@ -118,6 +118,15 @@
     content:"";width:5px;height:5px;border-radius:50%;
     background:var(--ocean);margin-right:10px;flex:none;
   }
+  .hero-proof-frame{position:relative;}
+  .hero-proof-frame::before{
+    content:"";position:absolute;
+    top:26px;left:26px;right:-16px;bottom:-16px;
+    background:#c9ecfa;border-radius:28px;
+  }
+  @media(max-width:860px){
+    .hero-proof-frame::before{top:14px;left:14px;right:-10px;bottom:-10px;}
+  }
   .hero-proof .compare{
     border-radius:22px;
     box-shadow:0 24px 48px rgba(10,37,64,0.16);

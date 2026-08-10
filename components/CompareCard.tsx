@@ -15,6 +15,8 @@ type CompareCardProps = {
   lazy?: boolean;
   /** true = slider seul, sans carte ni titre (utilisé dans le hero) */
   bare?: boolean;
+  /** Position initiale du curseur (0-100, part visible de l'avant) */
+  defaultValue?: number;
 };
 
 export default function CompareCard({
@@ -28,8 +30,9 @@ export default function CompareCard({
   caption,
   lazy = true,
   bare = false,
+  defaultValue = 50,
 }: CompareCardProps) {
-  const [value, setValue] = useState(50);
+  const [value, setValue] = useState(defaultValue);
   const loading = lazy ? "lazy" : undefined;
 
   const compare = (
