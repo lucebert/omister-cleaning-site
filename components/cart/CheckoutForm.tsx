@@ -85,8 +85,8 @@ function AddressFields({
           <input
             required
             inputMode="numeric"
-            pattern="[0-9]{5}"
-            title="Code postal à 5 chiffres"
+            pattern="(?!9[78])[0-9]{5}"
+            title="Code postal de France métropolitaine (5 chiffres — nous ne livrons pas encore l'outre-mer)"
             autoComplete={`${prefix} postal-code`}
             value={address.postalCode}
             onChange={set("postalCode")}
@@ -252,7 +252,12 @@ export default function CheckoutForm() {
           <span>Total</span>
           <span>{formatPrice(total)}</span>
         </div>
-        {error && <p className="checkout-error">{error}</p>}
+        {error && (
+          <p className="checkout-error" role="alert">
+            {error} Vous pouvez aussi commander par téléphone au{" "}
+            <a href="tel:0610133642">06 10 13 36 42</a>.
+          </p>
+        )}
         <button
           className="btn btn-primary cart-checkout"
           type="submit"

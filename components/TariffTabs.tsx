@@ -17,10 +17,14 @@ export default function TariffTabs() {
 
   return (
     <>
-      <div className="tariff-tabs" role="tablist">
+      <div className="tariff-tabs" role="tablist" aria-label="Catégories de tarifs">
         {TABS.map((tab) => (
           <button
             key={tab.id}
+            id={`tab-${tab.id}`}
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            aria-controls={`panel-${tab.id}`}
             className={activeTab === tab.id ? "tab-btn active" : "tab-btn"}
             data-tab={tab.id}
             onClick={() => setActiveTab(tab.id)}
@@ -30,20 +34,20 @@ export default function TariffTabs() {
         ))}
       </div>
 
-      <div className={panelClass("camion")} id="panel-camion">
+      <div className={panelClass("camion")} id="panel-camion" role="tabpanel" aria-labelledby="tab-camion">
         <div className="tariff-row"><div><div className="name">Camion utilitaire sans chauffeur</div><div className="detail">Déménagement, achats en magasin, transport de meubles</div></div><div className="price">À partir de 100€</div></div>
         <div className="tariff-row"><div><div className="name">Camion utilitaire avec chauffeur</div><div className="detail">Transport pris en charge de A à Z</div></div><div className="price">Sur devis</div></div>
         <p className="tariff-note">Tarif selon durée, kilométrage et créneau souhaité.</p>
       </div>
 
-      <div className={panelClass("auto")} id="panel-auto">
+      <div className={panelClass("auto")} id="panel-auto" role="tabpanel" aria-labelledby="tab-auto">
         <div className="tariff-row"><div><div className="name">Formule Express</div><div className="detail">Aspiration des moquettes et plastiques</div></div><div className="price">À partir de 30€</div></div>
         <div className="tariff-row"><div><div className="name">Formule Intégrale Intérieure</div><div className="detail">Brossage mécanique à la visseuse + aspiration + shampouineuse + plastiques</div></div><div className="price">À partir de 50€</div></div>
         <div className="tariff-row"><div><div className="name">Sièges voiture</div><div className="detail">Nettoyage en profondeur</div></div><div className="price">À partir de 10€/siège</div></div>
         <p className="tariff-note">Véhicules très sales ou familiaux : devis personnalisé.</p>
       </div>
 
-      <div className={panelClass("mobilier")} id="panel-mobilier">
+      <div className={panelClass("mobilier")} id="panel-mobilier" role="tabpanel" aria-labelledby="tab-mobilier">
         <div className="tariff-row"><div><div className="name">Fauteuil</div></div><div className="price">À partir de 30€</div></div>
         <div className="tariff-row"><div><div className="name">Tapis</div><div className="detail">Selon la taille</div></div><div className="price">À partir de 20€</div></div>
         <div className="tariff-row"><div><div className="name">Matelas</div></div><div className="price">Sur devis</div></div>
@@ -52,7 +56,7 @@ export default function TariffTabs() {
         <div className="tariff-row"><div><div className="name">Canapé 5 places et +</div></div><div className="price">À partir de 100€</div></div>
       </div>
 
-      <div className={panelClass("habitation")} id="panel-habitation">
+      <div className={panelClass("habitation")} id="panel-habitation" role="tabpanel" aria-labelledby="tab-habitation">
         <div className="tariff-row"><div><div className="name">Terrasse</div></div><div className="price">Sur devis</div></div>
         <div className="tariff-row"><div><div className="name">Commerce / Local professionnel</div></div><div className="price">Sur devis</div></div>
         <div className="tariff-row"><div><div className="name">Sol maison / appartement / grandes surfaces moquette</div><div className="detail">Monobrosse : décapage, lustrage, récurage</div></div><div className="price">Sur devis</div></div>

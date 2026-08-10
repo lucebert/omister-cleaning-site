@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { useCart } from "./CartContext";
 import {
   getProduct,
@@ -10,6 +12,45 @@ import {
 
 export default function CartWidget() {
   const { items, count, setQty, remove, isOpen, setOpen } = useCart();
+  const pathname = usePathname();
+  const drawerRef = useRef<HTMLElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    returnFocusRef.current = document.activeElement as HTMLElement;
+    closeRef.current?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        return;
+      }
+      if (e.key !== "Tab" || !drawerRef.current) return;
+      const focusables = drawerRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not(:disabled), input, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      returnFocusRef.current?.focus?.();
+    };
+  }, [isOpen, setOpen]);
+
+  // Le checkout et la confirmation ont leur propre résumé : pas de panier flottant
+  if (pathname === "/commande" || pathname === "/merci") return null;
 
   const subtotal = items.reduce((sum, i) => {
     const p = getProduct(i.id);
@@ -50,6 +91,7 @@ export default function CartWidget() {
       )}
 
       <aside
+        ref={drawerRef}
         className={isOpen ? "cart-drawer open" : "cart-drawer"}
         aria-label="Panier"
         aria-hidden={!isOpen}
@@ -57,6 +99,7 @@ export default function CartWidget() {
         <div className="cart-head">
           <h3>Votre panier</h3>
           <button
+            ref={closeRef}
             className="cart-close"
             type="button"
             aria-label="Fermer le panier"
@@ -86,7 +129,7 @@ export default function CartWidget() {
                 if (!p) return null;
                 return (
                   <div className="cart-item" key={item.id}>
-                    <img src={p.image} alt={p.name} />
+                    <img src={p.image} alt={p.name} loading="lazy" />
                     <div className="cart-item-info">
                       <div className="cart-item-name">{p.name}</div>
                       <div className="cart-item-price">
@@ -104,6 +147,7 @@ export default function CartWidget() {
                         <button
                           type="button"
                           aria-label="Augmenter la quantité"
+                          disabled={item.qty >= 99}
                           onClick={() => setQty(item.id, item.qty + 1)}
                         >
                           +

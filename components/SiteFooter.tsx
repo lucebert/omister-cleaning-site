@@ -2,7 +2,7 @@ export default function SiteFooter() {
   return (
     <footer>
       <div className="foot-brand">O'Mister Cleaning</div>
-      Location de camion & nettoyage professionnel · Île-de-France · © 2026
+      Location de camion & nettoyage professionnel · Île-de-France · © {new Date().getFullYear()}
       <div className="foot-links">
         <a href="/mentions-legales">Mentions légales</a>
         <span aria-hidden="true">·</span>

@@ -27,7 +27,8 @@ function cleanAddress(a: unknown): Address | null {
     !result.givenName ||
     !result.familyName ||
     !result.streetAndNumber ||
-    !/^[0-9]{5}$/.test(result.postalCode) ||
+    // France métropolitaine uniquement : les codes 97xxx/98xxx (outre-mer) sont refusés
+    !/^(?!9[78])[0-9]{5}$/.test(result.postalCode) ||
     !result.city
   ) {
     return null;
@@ -75,6 +76,12 @@ export async function POST(req: NextRequest) {
   }
   const phone = typeof body.phone === "string" ? body.phone.trim() : "";
 
+  if (/^9[78]/.test(String(body?.shippingAddress?.postalCode ?? "").trim())) {
+    return NextResponse.json(
+      { error: "Nous livrons uniquement en France métropolitaine pour le moment." },
+      { status: 400 }
+    );
+  }
   const shippingAddress = cleanAddress(body.shippingAddress);
   if (!shippingAddress) {
     return NextResponse.json(

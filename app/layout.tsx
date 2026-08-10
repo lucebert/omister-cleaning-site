@@ -30,10 +30,11 @@ export default function RootLayout({
           content="Camion utilitaire avec ou sans chauffeur, nettoyage auto, mobilier et habitation à Pontoise et en Île-de-France. Devis clair, intervention rapide."
         />
         <meta property="og:type" content="business.business" />
-        <link
-          rel="icon"
-          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23081b33'/%3E%3Cpath d='M8 6v6M8 12c-2 2-2 5 0 7s4 2 6 0' stroke='%2300d4ff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='15' r='3.5' stroke='%2300e0a8' stroke-width='2' fill='none'/%3E%3C/svg%3E"
+        <meta
+          property="og:image"
+          content="https://www.omistercleaning.fr/images/img-05.jpg"
         />
+        <link rel="icon" href="/images/img-12.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
