@@ -28,7 +28,7 @@ export default function SiteHeader() {
       <div className="nav wrap">
         <a className="brand" href="/">
           <span className="brand-mark">
-            <img src="/images/img-12.png" alt="" width={38} height={38} />
+            <img src="/images/img-12.png" alt="" width={50} height={50} />
           </span>
           O'Mister Cleaning
         </a>
