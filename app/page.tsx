@@ -165,11 +165,6 @@ export default function Home() {
             caption="Tissu terni et taches disparues, assise retrouvée uniforme et propre."
           />
         </div>
-        <div className="cta-row">
-          <button className="btn btn-cyan" type="button" data-devis-trigger>
-            Obtenir mon tarif →
-          </button>
-        </div>
       </section>
 
       <Reviews />
