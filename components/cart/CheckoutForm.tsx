@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useCart } from "./CartContext";
+import PaymentLogos from "../PaymentLogos";
 import {
   getProduct,
   formatPrice,
@@ -272,6 +273,7 @@ export default function CheckoutForm() {
           </svg>
           Paiement 100% sécurisé par Mollie
         </p>
+        <PaymentLogos />
       </aside>
     </form>
   );

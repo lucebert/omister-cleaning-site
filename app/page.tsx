@@ -1,6 +1,7 @@
 import CompareCard from "../components/CompareCard";
 import TariffTabs from "../components/TariffTabs";
 import AddToCartButton from "../components/cart/AddToCartButton";
+import PaymentLogos from "../components/PaymentLogos";
 
 export default function Home() {
   return (
@@ -262,6 +263,7 @@ export default function Home() {
           <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           Paiement 100% sécurisé par Mollie
         </p>
+        <PaymentLogos />
       </section>
 
       <section>

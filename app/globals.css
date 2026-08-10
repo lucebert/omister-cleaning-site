@@ -475,3 +475,10 @@
   }
   .checkout-empty{text-align:center;padding:24px;display:flex;flex-direction:column;gap:18px;align-items:center;color:var(--muted);}
   .merci-actions{display:flex;justify-content:center;margin-top:28px;}
+
+  /* ===== Logos moyens de paiement ===== */
+  .pay-logos{display:flex;justify-content:center;gap:8px;margin-top:12px;}
+  .pay-logo svg{
+    width:42px;height:27px;display:block;
+    background:#fff;border:1px solid var(--line);border-radius:5px;
+  }
