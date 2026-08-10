@@ -41,9 +41,10 @@
   .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
   .brand{
     display:flex;align-items:baseline;
-    font-family:'Outfit',sans-serif;font-weight:800;font-size:1.35rem;
+    font-family:'Outfit',sans-serif;font-weight:800;font-size:1.7rem;
     color:var(--navy);letter-spacing:-0.02em;white-space:nowrap;
   }
+  @media(max-width:760px){ .brand{font-size:1.35rem;} }
   .brand-accent{color:var(--ocean);}
   .nav-links{display:flex;gap:28px;font-size:0.92rem;font-weight:500;color:var(--muted);}
   .nav-links a:hover{color:var(--ocean);}
