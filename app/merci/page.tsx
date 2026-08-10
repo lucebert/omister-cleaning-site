@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { mollie } from "../../lib/mollie";
+import SiteFooter from "../../components/SiteFooter";
 import ClearCartOnSuccess from "../../components/cart/ClearCartOnSuccess";
 
 export const metadata: Metadata = {
@@ -97,6 +98,7 @@ export default async function MerciPage({
       </section>
 
       {message.success && <ClearCartOnSuccess />}
+      <SiteFooter />
     </>
   );
 }

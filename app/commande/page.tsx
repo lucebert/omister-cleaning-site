@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteFooter from "../../components/SiteFooter";
 import CheckoutForm from "../../components/cart/CheckoutForm";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function CommandePage() {
           <CheckoutForm />
         </div>
       </section>
+      <SiteFooter />
     </>
   );
 }

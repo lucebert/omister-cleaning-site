@@ -2,6 +2,7 @@ import CompareCard from "../components/CompareCard";
 import TariffTabs from "../components/TariffTabs";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
+import SiteFooter from "../components/SiteFooter";
 
 export default function Home() {
   return (
@@ -212,7 +213,7 @@ export default function Home() {
         <div className="section-head">
           <div className="section-eyebrow">Grille tarifaire</div>
           <h2 className="section-title">Des prix clairs, annoncés à l'avance</h2>
-          <p className="section-sub">⚠️ Tous les tarifs indiqués sont des prix de départ (« à partir de »), ajustés selon l'état, la taille et la complexité de l'intervention.</p>
+          <p className="section-sub">Tous les tarifs indiqués sont des prix de départ (« à partir de »), ajustés selon l'état, la taille et la complexité de l'intervention.</p>
         </div>
         <TariffTabs />
       </section>
@@ -340,10 +341,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="foot-brand">O'Mister Cleaning</div>
-        Location de camion & nettoyage professionnel · Île-de-France · © 2026
-      </footer>
+      <SiteFooter />
     </>
   );
 }

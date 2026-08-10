@@ -274,6 +274,10 @@ export default function CheckoutForm() {
           Paiement 100% sécurisé par Mollie
         </p>
         <PaymentLogos />
+        <p className="checkout-shipping-note">
+          Livraison en France métropolitaine — expédition sous 2 à 4 jours
+          ouvrés.
+        </p>
       </aside>
     </form>
   );
