@@ -13,8 +13,8 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <h1 className="hero-title">Nettoyage professionnel auto, mobilier <span className="accent">&</span> habitation.</h1>
-            <p className="hero-sub">Sièges auto, canapés, matelas, tapis et sols nettoyés en profondeur au matériel professionnel, chez vous en Île-de-France. Besoin de transporter ? On loue aussi des camions utilitaires, avec ou sans chauffeur.</p>
+            <h1 className="hero-title">Vos sièges, canapés et matelas, rendus <span className="accent">comme neufs</span>.</h1>
+            <p className="hero-sub">Nettoyage professionnel en profondeur — auto, mobilier, habitation — chez vous, partout en Île-de-France. Et pour vos déménagements, location de camion utilitaire avec ou sans chauffeur.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="tel:0610133642">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 12.9 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2Z"/></svg>
@@ -163,7 +163,7 @@ export default function Home() {
 
       <section id="tarifs" style={{ background: "#fff" }}>
         <div className="section-head">
-          <h2 className="section-title">Des prix de départ annoncés avant l'intervention</h2>
+          <h2 className="section-title">Les prix, annoncés avant d'intervenir</h2>
           <p className="section-sub">Tous les tarifs indiqués sont des prix de départ (« à partir de »), ajustés selon l'état, la taille et la complexité de l'intervention.</p>
         </div>
         <TariffTabs />
@@ -171,7 +171,7 @@ export default function Home() {
 
       <section id="boutique" style={{ background: "#fff" }}>
         <div className="section-head">
-          <h2 className="section-title">Nos produits, à commander en ligne</h2>
+          <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
           <p className="section-sub">Le nécessaire pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux interventions.</p>
         </div>
 
@@ -260,7 +260,7 @@ export default function Home() {
 
       <section id="contact">
         <div className="section-head">
-          <h2 className="section-title">Parlons de votre projet</h2>
+          <h2 className="section-title">Demandez votre devis</h2>
         </div>
         <div className="contact-grid">
           <div className="contact-card">
@@ -288,7 +288,7 @@ export default function Home() {
           <div className="cta-panel">
             <h3>Un devis en 5 minutes</h3>
             <p>Décrivez-nous votre besoin par téléphone ou message Instagram : nous vous répondons avec un tarif clair, sans engagement.</p>
-            <a className="btn btn-primary" href="tel:0610133642">Appeler maintenant</a>
+            <a className="btn btn-primary" href="tel:0610133642">Appeler le 06 10 13 36 42</a>
           </div>
         </div>
       </section>
