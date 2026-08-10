@@ -441,6 +441,7 @@
     transition:border-color .15s ease;
   }
   .field input:focus{outline:none;border-color:var(--ocean);background:#fff;}
+  .field-hint{color:var(--muted);font-size:0.76rem;}
   .checkbox{
     display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--ink);
     margin-bottom:12px;cursor:pointer;

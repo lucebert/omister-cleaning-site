@@ -24,7 +24,7 @@ export default function CommandePage() {
       <section>
         <div className="section-head">
           <h2 className="section-title">Finalisez votre commande</h2>
-          <p className="section-sub">Renseignez vos coordonnées, vous serez ensuite redirigé vers la page de paiement sécurisée Mollie.</p>
+          <p className="section-sub">Renseignez vos coordonnées, puis payez sur la page sécurisée Mollie — aucune donnée bancaire ne transite par notre site.</p>
         </div>
         <div className="checkout-wrap">
           <CheckoutForm />

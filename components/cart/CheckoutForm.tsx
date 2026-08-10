@@ -134,9 +134,9 @@ export default function CheckoutForm() {
   if (items.length === 0) {
     return (
       <div className="checkout-empty">
-        <p>Votre panier est vide.</p>
+        <p>Votre panier est vide — les produits vous attendent en boutique.</p>
         <a className="btn btn-primary" href="/#boutique">
-          Retour à la boutique
+          Voir les produits
         </a>
       </div>
     );
@@ -186,6 +186,7 @@ export default function CheckoutForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <small className="field-hint">Pour le suivi de votre commande.</small>
             </label>
             <label className="field">
               <span>Téléphone *</span>
@@ -196,6 +197,7 @@ export default function CheckoutForm() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
+              <small className="field-hint">Uniquement en cas de souci de livraison.</small>
             </label>
           </div>
         </div>
@@ -263,7 +265,9 @@ export default function CheckoutForm() {
           type="submit"
           disabled={submitting}
         >
-          {submitting ? "Redirection vers le paiement…" : "Payer avec Mollie"}
+          {submitting
+            ? "Redirection vers le paiement…"
+            : `Payer ${formatPrice(total)}`}
         </button>
         <p className="shop-secure">
           <svg
