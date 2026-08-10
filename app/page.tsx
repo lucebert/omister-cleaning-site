@@ -55,88 +55,58 @@ export default function Home() {
           <h2 className="section-title">Location de camion & nettoyage, en un seul endroit</h2>
           <p className="section-sub">Quatre domaines d'intervention, chacun détaillé ci-dessous pour que vous choisissiez la formule adaptée à votre besoin.</p>
         </div>
-        <div className="services-grid">
+        <div className="offers">
 
-          <div className="service-card featured">
-            <span className="service-tag">Location express</span>
-            <div className="service-icon"><svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="7" width="15" height="10" rx="1"/><path d="M16 10h3.5a1 1 0 0 1 .9.5l2.1 3.5a1 1 0 0 1 .1.5V17a1 1 0 0 1-1 1H16"/><circle cx="6" cy="19" r="1.6"/><circle cx="18.5" cy="19" r="1.6"/></svg></div>
-            <h3>Location de camions utilitaires</h3>
-            <p className="service-intro">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
-            <ul className="service-sublist">
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Sans chauffeur</div><div className="sub-desc">Vous conduisez vous-même, formule la plus économique.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Avec chauffeur</div><div className="sub-desc">On s'occupe de la conduite et du transport, en toute sécurité.</div></div>
-              </li>
-            </ul>
-            <div className="service-price">À partir de 100€</div>
-          </div>
+          <article className="offer">
+            <div className="offer-head">
+              <h3>Location de camions utilitaires</h3>
+              <span className="offer-price">À partir de 100€</span>
+            </div>
+            <p className="offer-desc">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
+            <dl className="offer-items">
+              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd></div>
+              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd></div>
+            </dl>
+          </article>
 
-          <div className="service-card">
-            <div className="service-icon"><svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2v-1.4a2 2 0 0 1 .6-1.4l1.7-1.7A2 2 0 0 1 6.7 10h10.6a2 2 0 0 1 1.4.6l1.7 1.7a2 2 0 0 1 .6 1.4V15a2 2 0 0 1-2 2M7 17v2M17 17v2M6 10l1-3.2A2 2 0 0 1 8.9 5h6.2a2 2 0 0 1 1.9 1.8L18 10"/></svg></div>
-            <h3>Nettoyage automobile</h3>
-            <p className="service-intro">Trois formules selon le niveau de nettoyage recherché.</p>
-            <ul className="service-sublist">
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Formule Express</div><div className="sub-desc">Aspiration complète des moquettes, sièges et plastiques.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Formule Intégrale</div><div className="sub-desc">Brossage mécanique, shampouineuse tissus/moquettes, plastiques et vitres.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Sièges seuls</div><div className="sub-desc">Nettoyage en profondeur, taches et odeurs éliminées.</div></div>
-              </li>
-            </ul>
-            <div className="service-price">À partir de 30€</div>
-          </div>
+          <article className="offer">
+            <div className="offer-head">
+              <h3>Nettoyage automobile</h3>
+              <span className="offer-price">À partir de 30€</span>
+            </div>
+            <p className="offer-desc">Trois formules selon le niveau de nettoyage recherché.</p>
+            <dl className="offer-items">
+              <div><dt>Formule Express</dt><dd>Aspiration complète des moquettes, sièges et plastiques.</dd></div>
+              <div><dt>Formule Intégrale</dt><dd>Brossage mécanique, shampouineuse tissus/moquettes, plastiques et vitres.</dd></div>
+              <div><dt>Sièges seuls</dt><dd>Nettoyage en profondeur, taches et odeurs éliminées.</dd></div>
+            </dl>
+          </article>
 
-          <div className="service-card">
-            <div className="service-icon"><svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 18v-5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v5M3 18h18M5 18v2M19 18v2M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg></div>
-            <h3>Mobilier & textiles</h3>
-            <p className="service-intro">Nettoyage en profondeur à la shampouineuse professionnelle.</p>
-            <ul className="service-sublist">
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Fauteuil & tapis</div><div className="sub-desc">Taches, bactéries, acariens et odeurs éliminés.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Matelas</div><div className="sub-desc">Devis personnalisé selon la taille.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Canapé</div><div className="sub-desc">2/3 places, d'angle, ou 5 places et plus.</div></div>
-              </li>
-            </ul>
-            <div className="service-price">À partir de 30€ — Canapé à partir de 70€</div>
-          </div>
+          <article className="offer">
+            <div className="offer-head">
+              <h3>Mobilier & textiles</h3>
+              <span className="offer-price">À partir de 30€</span>
+            </div>
+            <p className="offer-desc">Nettoyage en profondeur à la shampouineuse professionnelle.</p>
+            <dl className="offer-items">
+              <div><dt>Fauteuil & tapis</dt><dd>Taches, bactéries, acariens et odeurs éliminés.</dd></div>
+              <div><dt>Matelas</dt><dd>Devis personnalisé selon la taille.</dd></div>
+              <div><dt>Canapé</dt><dd>2/3 places, d'angle, ou 5 places et plus — à partir de 70€.</dd></div>
+            </dl>
+          </article>
 
-          <div className="service-card">
-            <div className="service-icon"><svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11.5 12 4l9 7.5M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></div>
-            <h3>Habitation & professionnels</h3>
-            <p className="service-intro">Sols et surfaces traités à la monobrosse professionnelle.</p>
-            <ul className="service-sublist">
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Décapage</div><div className="sub-desc">Retrait des couches de saleté incrustée et anciens traitements.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Lustrage</div><div className="sub-desc">Brillance et finition nette redonnées au sol.</div></div>
-              </li>
-              <li>
-                <span className="check"><svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <div><div className="sub-name">Récurage</div><div className="sub-desc">Nettoyage en profondeur des sols très encrassés.</div></div>
-              </li>
-            </ul>
-            <div className="service-price">Sur devis personnalisé</div>
-          </div>
+          <article className="offer">
+            <div className="offer-head">
+              <h3>Habitation & professionnels</h3>
+              <span className="offer-price">Sur devis</span>
+            </div>
+            <p className="offer-desc">Sols et surfaces traités à la monobrosse professionnelle.</p>
+            <dl className="offer-items">
+              <div><dt>Décapage</dt><dd>Retrait des couches de saleté incrustée et anciens traitements.</dd></div>
+              <div><dt>Lustrage</dt><dd>Brillance et finition nette redonnées au sol.</dd></div>
+              <div><dt>Récurage</dt><dd>Nettoyage en profondeur des sols très encrassés.</dd></div>
+            </dl>
+          </article>
 
         </div>
       </section>
