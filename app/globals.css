@@ -79,6 +79,7 @@
   .nav-burger:focus-visible{outline:3px solid var(--cyan);outline-offset:2px;}
   @media(max-width:760px){
     .nav-burger{display:flex;}
+    .nav-cta{display:none;}
     .nav-links{
       display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;
       flex-direction:column;gap:0;
