@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type CompareCardProps = {
   id: number;
@@ -17,6 +17,8 @@ type CompareCardProps = {
   bare?: boolean;
   /** Position initiale du curseur (0-100, part visible de l'avant) */
   defaultValue?: number;
+  /** true = balayage d'ouverture au chargement (hero) */
+  introWipe?: boolean;
 };
 
 export default function CompareCard({
@@ -31,12 +33,31 @@ export default function CompareCard({
   lazy = true,
   bare = false,
   defaultValue = 50,
+  introWipe = false,
 }: CompareCardProps) {
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(introWipe ? 0 : defaultValue);
+  const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    if (!introWipe) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setValue(defaultValue);
+      return;
+    }
+    const start = setTimeout(() => {
+      setAnimating(true);
+      setValue(defaultValue);
+    }, 500);
+    const stop = setTimeout(() => setAnimating(false), 1900);
+    return () => {
+      clearTimeout(start);
+      clearTimeout(stop);
+    };
+  }, [introWipe, defaultValue]);
   const loading = lazy ? "lazy" : undefined;
 
   const compare = (
-    <div className="compare" id={`compare-${id}`}>
+    <div className={animating ? "compare intro-anim" : "compare"} id={`compare-${id}`}>
       <img src={afterSrc} alt={afterAlt} loading={loading} />
       <div
         className="after-wrap"

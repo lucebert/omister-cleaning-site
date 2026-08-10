@@ -38,6 +38,7 @@ export default function Home() {
                 bare
                 lazy={false}
                 defaultValue={35}
+                introWipe
                 afterSrc="/images/img-03.jpg"
                 afterAlt="Matelas après nettoyage"
                 beforeSrc="/images/img-04.jpg"
@@ -50,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services">
+      <section id="services" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Nos prestations</h2>
           <p className="section-sub">Trois domaines de nettoyage, plus la location de camion utilitaire pour vos transports — choisissez la formule adaptée à votre besoin.</p>
@@ -112,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="avant-apres" style={{ background: "#fff" }}>
+      <section id="avant-apres" className="section-dark">
         <div className="section-head">
           <h2 className="section-title">Avant / après, en un coup d'œil</h2>
           <p className="section-sub">Faites glisser le curseur pour voir la différence.</p>
@@ -161,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tarifs" style={{ background: "#fff" }}>
+      <section id="tarifs" className="section-white">
         <div className="section-head">
           <h2 className="section-title">Les prix, annoncés avant d'intervenir</h2>
           <p className="section-sub">Tous les tarifs indiqués sont des prix de départ (« à partir de »), ajustés selon l'état, la taille et la complexité de l'intervention.</p>
@@ -169,7 +170,7 @@ export default function Home() {
         <TariffTabs />
       </section>
 
-      <section id="boutique" style={{ background: "#fff" }}>
+      <section id="boutique" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
           <p className="section-sub">Le nécessaire pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux interventions.</p>
@@ -217,7 +218,7 @@ export default function Home() {
         <PaymentLogos />
       </section>
 
-      <section>
+      <section className="section-white">
         <div className="section-head">
           <h2 className="section-title">Comment on travaille</h2>
         </div>
@@ -245,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="zone">
+      <section id="zone" className="section-white">
         <div className="zone-section">
           <div>
             <h2>Disponible dans toute l'Île-de-France</h2>
@@ -258,7 +259,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Demandez votre devis</h2>
         </div>

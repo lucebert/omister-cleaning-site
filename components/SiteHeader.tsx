@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "#services", label: "Prestations" },
-  { href: "#avant-apres", label: "Avant/Après" },
+  { href: "#services", label: "Prestations", mobileOnly: true },
+  { href: "#avant-apres", label: "Avant/Après", mobileOnly: true },
   { href: "#tarifs", label: "Tarifs" },
   { href: "#boutique", label: "Boutique" },
-  { href: "#zone", label: "Zone" },
+  { href: "#zone", label: "Zone", mobileOnly: true },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -31,7 +31,12 @@ export default function SiteHeader() {
         </a>
         <nav className={open ? "nav-links open" : "nav-links"} aria-label="Navigation principale">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <a
+              key={l.href}
+              href={l.href}
+              className={l.mobileOnly ? "nav-extra" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {l.label}
             </a>
           ))}
