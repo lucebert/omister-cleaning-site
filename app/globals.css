@@ -537,7 +537,11 @@
   .review-card blockquote::before{content:"« ";color:var(--ocean);}
   .review-card blockquote::after{content:" »";color:var(--ocean);}
   .review-card figcaption{margin-top:14px;font-size:0.85rem;color:var(--navy);}
-  .review-card .review-meta{display:block;color:var(--muted);font-size:0.78rem;margin-top:2px;}
+  .review-card .review-meta{
+    display:flex;align-items:center;gap:6px;
+    color:var(--muted);font-size:0.78rem;margin-top:4px;
+  }
+  .review-card .review-meta svg{width:15px;height:15px;flex:none;}
 
   /* ===== Citations d'avis ===== */
   .hero-quote{
