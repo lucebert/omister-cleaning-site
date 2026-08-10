@@ -1,5 +1,6 @@
 import CompareCard from "../components/CompareCard";
 import SiteHeader from "../components/SiteHeader";
+import Reviews from "../components/Reviews";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
 import SiteFooter from "../components/SiteFooter";
@@ -163,6 +164,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Reviews />
+
       <section id="boutique" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
@@ -249,6 +252,38 @@ export default function Home() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" strokeWidth="2"><path d="M12 22s8-9 8-14a8 8 0 1 0-16 0c0 5 8 14 8 14Z"/><circle cx="12" cy="8" r="3"/></svg>
             Pontoise · 95300
           </div>
+        </div>
+      </section>
+
+      <section id="faq" className="section-white">
+        <div className="section-head">
+          <h2 className="section-title">Questions fréquentes</h2>
+        </div>
+        <div className="faq-list">
+          <details className="faq-item">
+            <summary>Comment obtenir un devis ?</summary>
+            <p>Appelez le <a href="tel:0610133642">06 10 13 36 42</a> ou envoyez un message sur Instagram avec une photo de ce qu'il faut nettoyer : vous recevez un tarif clair en quelques minutes, gratuitement et sans engagement.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Comment se passe la réservation ?</summary>
+            <p>On fixe ensemble un créneau, puis un acompte vient le confirmer. Les modalités exactes vous sont précisées au moment du devis, avant tout engagement.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Où intervenez-vous ?</summary>
+            <p>Nous sommes basés à Pontoise (95300) et nous nous déplaçons chez vous dans toute l'Île-de-France, pour les particuliers comme pour les professionnels.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Est-ce que toutes les taches partent ?</summary>
+            <p>La grande majorité, oui — les photos avant/après de cette page sont de vraies interventions. Certaines taches très anciennes ou incrustées peuvent laisser une trace légère : on vous le dit honnêtement dès le devis.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Combien de temps ça prend ?</summary>
+            <p>La durée dépend de la prestation et de l'état — elle vous est annoncée avec le devis. Pour les textiles (canapé, matelas, sièges), prévoyez ensuite quelques heures de séchage avant réutilisation.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Boutique : paiement et livraison ?</summary>
+            <p>Paiement sécurisé par carte bancaire ou Apple Pay via Mollie. Livraison en France métropolitaine : 4,95€, offerte dès 30€ d'achat, expédition sous 2 à 4 jours ouvrés.</p>
+          </details>
         </div>
       </section>
 

@@ -94,11 +94,26 @@
     line-height:1.06;letter-spacing:-0.025em;
     margin-bottom:18px;
   }
-  h1.hero-title .accent{color:var(--ocean);}
+  h1.hero-title .accent{
+    color:var(--navy);position:relative;z-index:0;white-space:nowrap;
+  }
+  h1.hero-title .accent::after{
+    content:"";position:absolute;z-index:-1;
+    left:-0.08em;right:-0.08em;bottom:0.02em;height:0.42em;
+    background:linear-gradient(90deg, rgba(0,212,255,0.55), rgba(0,224,168,0.45));
+    border-radius:0.1em 0.3em 0.12em 0.35em;
+    transform:rotate(-1.2deg);
+  }
   .hero-sub{
     color:var(--muted);font-size:1.02rem;max-width:520px;margin-bottom:30px;
   }
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px;}
+  .hero .btn-primary{
+    background:var(--cyan);color:var(--navy);
+    box-shadow:0 10px 24px rgba(0,212,255,0.35);
+  }
+  .hero .btn-primary:hover{background:#33ddff;box-shadow:0 14px 28px rgba(0,212,255,0.45);}
+  .hero .btn-primary svg{stroke:var(--navy);}
   .btn{
     padding:14px 28px;border-radius:100px;font-weight:600;font-size:0.95rem;
     display:inline-flex;align-items:center;gap:8px;
@@ -486,3 +501,39 @@
   }
   .legal-wrap p{font-size:0.92rem;color:var(--ink);line-height:1.65;}
   .legal-wrap a{color:var(--ocean);text-decoration:underline;}
+
+  /* ===== FAQ ===== */
+  .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+  .faq-item{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;
+  }
+  .faq-item summary{
+    cursor:pointer;list-style:none;padding:18px 48px 18px 22px;
+    font-weight:700;color:var(--navy);font-size:0.98rem;position:relative;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"";position:absolute;right:20px;top:50%;
+    width:10px;height:10px;transform:translateY(-70%) rotate(45deg);
+    border-right:2px solid var(--ocean);border-bottom:2px solid var(--ocean);
+    transition:transform .2s ease;
+  }
+  .faq-item[open] summary::after{transform:translateY(-30%) rotate(225deg);}
+  .faq-item summary:focus-visible{outline:3px solid var(--cyan);outline-offset:-3px;}
+  .faq-item p{padding:0 22px 18px;color:var(--muted);font-size:0.92rem;line-height:1.6;}
+  .faq-item p a{color:var(--ocean);text-decoration:underline;}
+
+  /* ===== Avis ===== */
+  .reviews-grid{
+    max-width:1000px;margin:0 auto;display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;
+  }
+  .review-card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;
+  }
+  .review-card blockquote{color:var(--ink);font-size:0.95rem;line-height:1.6;}
+  .review-card blockquote::before{content:"« ";color:var(--ocean);}
+  .review-card blockquote::after{content:" »";color:var(--ocean);}
+  .review-card figcaption{margin-top:14px;font-size:0.85rem;color:var(--navy);}
+  .review-card .review-meta{display:block;color:var(--muted);font-size:0.78rem;margin-top:2px;}

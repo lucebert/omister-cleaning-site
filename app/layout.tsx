@@ -72,6 +72,41 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Comment obtenir un devis ?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Appelez le 06 10 13 36 42 ou envoyez un message sur Instagram avec une photo de ce qu'il faut nettoyer : vous recevez un tarif clair en quelques minutes, gratuitement et sans engagement.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Où intervenez-vous ?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Basés à Pontoise (95300), nous nous déplaçons chez vous dans toute l'Île-de-France, pour les particuliers comme pour les professionnels.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Est-ce que toutes les taches partent ?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "La grande majorité, oui. Certaines taches très anciennes ou incrustées peuvent laisser une trace légère : nous le disons honnêtement dès le devis.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         <CartProvider>
           {children}
           <CartWidget />
