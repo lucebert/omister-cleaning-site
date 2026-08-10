@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://omistercleaning.fr"),
   alternates: { canonical: "/" },
   title:
-    "O'Mister Cleaning — Nettoyage professionnel auto, mobilier & habitation en Île-de-France",
+    "O'Mister Cleaning — Nettoyage intérieur voiture à domicile en Île-de-France",
   description:
-    "O'Mister Cleaning à Pontoise : nettoyage professionnel auto, mobilier et habitation en Île-de-France, et location de camion utilitaire avec ou sans chauffeur. Devis rapide au 06 10 13 36 42.",
+    "Sièges, moquettes, plastiques, odeurs : l'intérieur de votre voiture rendu comme neuf, chez vous, partout en Île-de-France. À partir de 30€ — devis en 5 minutes au 06 10 13 36 42.",
 };
 
 export default function RootLayout({
@@ -23,11 +23,11 @@ export default function RootLayout({
       <head>
         <meta
           property="og:title"
-          content="O'Mister Cleaning — Nettoyage professionnel & location de camion"
+          content="O'Mister Cleaning — Votre voiture rendue comme neuve"
         />
         <meta
           property="og:description"
-          content="Nettoyage professionnel auto, mobilier et habitation à Pontoise et en Île-de-France, et camion utilitaire avec ou sans chauffeur. Devis clair, intervention rapide."
+          content="Nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France. À partir de 30€, devis en 5 minutes."
         />
         <meta property="og:type" content="business.business" />
         <meta
@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "O'Mister Cleaning",
               description:
-                "Nettoyage professionnel auto, mobilier et habitation, et location de camion utilitaire, à Pontoise et en Île-de-France.",
+                "Nettoyage automobile à domicile (sièges, moquettes, plastiques, odeurs), mobilier et habitation, et location de camion utilitaire, à Pontoise et en Île-de-France.",
               telephone: "+33610133642",
               email: "omister415@gmail.com",
               url: "https://www.omistercleaning.fr",
