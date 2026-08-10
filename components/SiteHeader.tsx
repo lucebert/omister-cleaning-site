@@ -41,7 +41,7 @@ export default function SiteHeader() {
           ))}
         </nav>
         <div className="nav-right">
-          <a className="nav-cta" href="tel:0610133642">06 10 13 36 42</a>
+          <a className="nav-cta" href="tel:0610133642">Devis gratuit</a>
           <button
             className="nav-burger"
             type="button"
