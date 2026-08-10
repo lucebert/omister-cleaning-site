@@ -45,7 +45,8 @@ Le nettoyage professionnel (auto, mobilier/textiles, habitation/locaux) est l'of
 ## Evidence on Hand
 
 - **Réel** : 10 photos avant/après authentiques d'interventions (`public/images/img-01.jpg` à `img-10.jpg`), photos des 3 produits (`img-11`, `img-13`, `img-15`), logo.
-- **Absent — ne pas fabriquer** : photos du camion, d'Omar ou du matériel ; avis clients (aucune fiche Google Business encore) ; chiffres d'activité (nombre d'interventions, ancienneté) ; témoignages. Aucun de ces éléments ne doit être inventé ; ils seront ajoutés quand Omar les fournira.
+- **Réel (ajouté août 2026)** : 6 avis clients authentiques repris du highlight « AVIS CLIENTS » d'Instagram (`lib/reviews.ts`) — quasi tous sur le nettoyage auto ; l'un mentionne « vous êtes vraiment cool tous les deux » (ils travaillent parfois à deux).
+- **Absent — ne pas fabriquer** : photos du camion, d'Omar ou du matériel ; avis Google (pas de fiche encore) ; chiffres d'activité (nombre d'interventions, ancienneté). Aucun de ces éléments ne doit être inventé ; ils seront ajoutés quand Omar les fournira.
 
 ## Product Principles
 
