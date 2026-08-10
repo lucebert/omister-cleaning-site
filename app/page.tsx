@@ -111,6 +111,11 @@ export default function Home() {
           </article>
 
         </div>
+        <div className="cta-row">
+          <button className="btn btn-cyan" type="button" data-devis-trigger>
+            Obtenir mon tarif →
+          </button>
+        </div>
       </section>
 
       <section id="avant-apres" className="section-dark">
@@ -159,6 +164,11 @@ export default function Home() {
             sliderLabel="Comparer avant et après - canapé d'angle"
             caption="Tissu terni et taches disparues, assise retrouvée uniforme et propre."
           />
+        </div>
+        <div className="cta-row">
+          <button className="btn btn-cyan" type="button" data-devis-trigger>
+            Obtenir mon tarif →
+          </button>
         </div>
       </section>
 

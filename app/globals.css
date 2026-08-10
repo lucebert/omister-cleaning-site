@@ -142,6 +142,13 @@
   .btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line);}
   .btn-ghost:hover{border-color:var(--ocean);color:var(--ocean);}
   .btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px;}
+  .btn-cyan{
+    background:var(--cyan);color:var(--navy);
+    border:none;cursor:pointer;font-family:inherit;font-weight:700;
+    box-shadow:0 10px 24px rgba(0,212,255,0.35);
+  }
+  .btn-cyan:hover{background:#33ddff;transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,212,255,0.45);}
+  .cta-row{display:flex;justify-content:center;margin-top:44px;}
   .hero-cta-note{
     margin:-16px 0 28px;font-size:0.88rem;color:var(--muted);
   }

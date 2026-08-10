@@ -69,6 +69,11 @@ export default function Reviews() {
           </figure>
         ))}
       </div>
+      <div className="cta-row">
+        <button className="btn btn-cyan" type="button" data-devis-trigger>
+          Obtenir mon tarif →
+        </button>
+      </div>
     </section>
   );
 }
