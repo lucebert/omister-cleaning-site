@@ -103,8 +103,12 @@
     display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;
   }
   @media(max-width:860px){
-    .hero{padding:48px 24px 64px;}
-    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .hero{padding:40px 20px 56px;}
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-sub{max-width:none;margin-bottom:26px;}
+    .hero-actions{flex-direction:column;align-items:stretch;gap:12px;margin-bottom:24px;}
+    .hero-actions .btn{width:100%;justify-content:center;padding:16px 24px;}
+    .hero-cta-note{margin:-8px 0 0;}
   }
   h1.hero-title{
     font-size:clamp(2.1rem, 4.5vw, 3.4rem);
@@ -170,7 +174,10 @@
     background:#c9ecfa;border-radius:28px;
   }
   @media(max-width:860px){
-    .hero-proof-frame::before{top:14px;left:14px;right:-10px;bottom:-10px;}
+    /* Cadre décoratif symétrique sur mobile (plus de débord asymétrique) */
+    .hero-proof-frame::before{top:auto;left:0;right:0;bottom:-10px;height:40px;border-radius:0 0 26px 26px;}
+    .hero-proof{max-width:440px;margin-inline:auto;width:100%;}
+    .hero-proof .compare{aspect-ratio:4/3.4;}
   }
   .hero-proof .compare{
     border-radius:22px;
