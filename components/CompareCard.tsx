@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type PointerEvent } from "react";
 
 type CompareCardProps = {
   id: number;
@@ -37,6 +37,38 @@ export default function CompareCard({
 }: CompareCardProps) {
   const [value, setValue] = useState(introWipe ? 0 : defaultValue);
   const [animating, setAnimating] = useState(false);
+  const compareRef = useRef<HTMLDivElement>(null);
+  const draggingRef = useRef(false);
+
+  const setValueFromClientX = (clientX: number) => {
+    const el = compareRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.width === 0) return;
+    const pct = ((clientX - rect.left) / rect.width) * 100;
+    setValue(Math.max(0, Math.min(100, pct)));
+  };
+
+  const handlePointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    // Ignore le pointeur clavier/lecteur d'écran ; le range input gère ce cas
+    draggingRef.current = true;
+    setAnimating(false);
+    e.currentTarget.setPointerCapture(e.pointerId);
+    setValueFromClientX(e.clientX);
+  };
+
+  const handlePointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    setValueFromClientX(e.clientX);
+  };
+
+  const stopDragging = (e: PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    draggingRef.current = false;
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+  };
 
   useEffect(() => {
     if (!introWipe) return;
@@ -57,7 +89,15 @@ export default function CompareCard({
   const loading = lazy ? "lazy" : undefined;
 
   const compare = (
-    <div className={animating ? "compare intro-anim" : "compare"} id={`compare-${id}`}>
+    <div
+      className={animating ? "compare intro-anim" : "compare"}
+      id={`compare-${id}`}
+      ref={compareRef}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={stopDragging}
+      onPointerCancel={stopDragging}
+    >
       <img src={afterSrc} alt={afterAlt} loading={loading} />
       <div
         className="after-wrap"
@@ -90,10 +130,11 @@ export default function CompareCard({
         className="compare-slider"
         min="0"
         max="100"
-        value={value}
+        value={Math.round(value)}
         onChange={(e) => setValue(Number(e.target.value))}
         id={`slider-${id}`}
         aria-label={sliderLabel}
+        tabIndex={0}
       />
     </div>
   );
