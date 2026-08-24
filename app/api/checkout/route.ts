@@ -134,6 +134,10 @@ export async function POST(req: NextRequest) {
         description,
         redirectUrl: `${origin}/merci`,
         cancelUrl: `${origin}/commande`,
+        // Mollie n'accepte pas les URLs localhost : le webhook n'est actif qu'en production
+        ...(host.includes("localhost") || host.startsWith("127.")
+          ? {}
+          : { webhookUrl: `${origin}/api/mollie-webhook` }),
         locale: "fr_FR",
         billingAddress: mollieAddress(billingAddress),
         shippingAddress: mollieAddress(shippingAddress),
