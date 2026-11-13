@@ -156,7 +156,7 @@ export const SERVICE_TABS: ServiceTab[] = [
       label: "Comparer avant et après - assise en tissu",
       caption: "Assise en tissu, vraie intervention.",
     },
-    videos: [V("02-moquette-monobrosse", "Grande moquette : aspiration puis monobrosse")],
+    videos: [V("06-restaurant-chaises", "Restaurant : fauteuils et banquettes en tissu, injection-extraction (accéléré ×2)"), V("02-moquette-monobrosse", "Grande moquette : aspiration puis monobrosse")],
     cta: "phone",
   },
   {
