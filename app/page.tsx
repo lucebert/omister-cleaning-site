@@ -17,40 +17,42 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <h1 className="hero-title">L'intérieur de votre voiture, rendu <span className="accent">comme neuf</span>.</h1>
-            <p className="hero-sub">Sièges, moquettes, plastiques, odeurs : nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France.</p>
+            <h1 className="hero-title">Voitures, canapés, moquettes, locaux : tout redevient <span className="accent">comme neuf</span>.</h1>
+            <p className="hero-sub">Nettoyage professionnel en profondeur, chez vous ou dans vos locaux, pour les particuliers comme pour les pros : restaurants, hôtels, agences immobilières, garages, autocars. Partout en Île-de-France.</p>
             <div className="hero-actions">
-              <button className="btn btn-primary" type="button" data-devis-trigger>
-                Obtenir mon tarif →
-              </button>
-              <a className="btn btn-ghost" href="https://www.instagram.com/o_mister_cleaning" target="_blank" rel="noopener">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-                Voir nos réalisations
+              <a className="btn btn-primary" href="#services">
+                Voir toutes nos prestations →
+              </a>
+              <a className="btn btn-ghost" href="tel:0610133642">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 12.9 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2Z"/></svg>
+                Devis gratuit : 06 10 13 36 42
               </a>
             </div>
-            <p className="hero-cta-note">Ou directement au <a href="tel:0610133642">06 10 13 36 42</a> — réponse en 5 minutes.</p>
+            <p className="hero-cta-note">Envoyez une photo sur <a href="https://www.instagram.com/o_mister_cleaning" target="_blank" rel="noopener">Instagram</a> ou par téléphone : tarif clair en 5 minutes.</p>
             <a className="hero-google" href="#avis">
               <span className="hero-google-stars" aria-hidden="true">★★★★★</span>
               <strong>5,0 sur Google</strong> · 11 avis clients
             </a>
-            <p className="hero-quote">« Le travail a été fait avec beaucoup de soin et ma voiture était nickel après son passage. » <span>— Anna M., avis Google, <a href="#avis">voir les avis</a></span></p>
+            <p className="hero-quote">« Que ce soit mon canapé/tapis, ma voiture, ou mes locaux : le service est top de A à Z. » <span>— Yacine S., avis Google, <a href="#avis">voir les avis</a></span></p>
           </div>
-          <div className="hero-proof">
-            <div className="hero-proof-frame">
-              <CompareCard
-                id={1}
-                bare
-                lazy={false}
-                defaultValue={32}
-                introWipe
-                afterSrc="/images/img-01.jpg"
-                afterAlt="Siège de voiture après nettoyage"
-                beforeSrc="/images/img-02.jpg"
-                beforeAlt="Siège de voiture avant nettoyage"
-                sliderLabel="Comparer avant et après - siège de voiture"
-              />
-            </div>
-            <p className="hero-proof-caption">Sièges arrière, vraie intervention — faites glisser pour comparer.</p>
+          <div className="hero-mosaic" aria-label="Nos métiers">
+            {[
+              { href: "#prestations-automobile", img: "/images/img-05.jpg", alt: "Banquette de voiture après nettoyage", label: "Voitures", sub: "dès 30€" },
+              { href: "#prestations-textiles", img: "/images/img-09.jpg", alt: "Canapé d'angle après nettoyage", label: "Canapés · matelas · tapis", sub: "dès 20€" },
+              { href: "#prestations-restaurants-hotels", img: "/images/tile-restaurant.jpg", alt: "Nettoyage d'un fauteuil de restaurant", label: "Restaurants & hôtels", sub: "pros" },
+              { href: "#prestations-sols-locaux", img: "/images/tile-moquette.jpg", alt: "Moquette nettoyée à la monobrosse", label: "Moquettes & sols", sub: "devis au m²" },
+              { href: "#prestations-automobile", img: "/images/tile-autocar.jpg", alt: "Sièges d'autocar nettoyés", label: "Autocars & flottes", sub: "pros" },
+              { href: "#prestations-agences-syndics", img: "", alt: "", label: "Agences & syndics", sub: "logement prêt sous 72 h" },
+            ].map((tile) => (
+              <a key={tile.label} className={`mosaic-tile${tile.img ? "" : " mosaic-text"}`} href={tile.href}>
+                {tile.img ? <img src={tile.img} alt={tile.alt} loading="eager" /> : null}
+                <span className="mosaic-label">
+                  <strong>{tile.label}</strong>
+                  <em>{tile.sub}</em>
+                </span>
+              </a>
+            ))}
+            <p className="hero-proof-caption mosaic-caption">Photos de vraies interventions — touchez une case pour voir la prestation.</p>
           </div>
         </div>
       </section>

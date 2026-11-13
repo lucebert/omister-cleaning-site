@@ -126,7 +126,7 @@ export default function ServiceTabs() {
               <div className="svc-cta">
                 {tab.cta === "devis" ? (
                   <button className="btn btn-cyan" type="button" data-devis-trigger>
-                    Obtenir mon tarif →
+                    Simuler le prix de ma voiture →
                   </button>
                 ) : (
                   <a className="btn btn-cyan" href="tel:0610133642">

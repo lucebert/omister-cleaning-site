@@ -339,6 +339,27 @@
   }
 
 
+
+  /* ===== Mosaïque des métiers (hero) ===== */
+  .hero-mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-self:center;}
+  .mosaic-tile{position:relative;display:block;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:var(--navy);box-shadow:0 10px 24px rgba(8,27,51,0.14);transition:transform .2s ease,box-shadow .2s ease;}
+  .mosaic-tile:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(8,27,51,0.22);}
+  .mosaic-tile:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+  .mosaic-tile img{width:100%;height:100%;object-fit:cover;}
+  .mosaic-label{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 10px;background:linear-gradient(180deg,rgba(8,27,51,0),rgba(8,27,51,0.88));color:#fff;display:flex;flex-direction:column;gap:2px;}
+  .mosaic-label strong{font-family:'Outfit',sans-serif;font-size:0.92rem;line-height:1.15;}
+  .mosaic-label em{font-style:normal;font-size:0.75rem;color:var(--cyan);font-weight:600;}
+  .mosaic-text{display:flex;align-items:flex-end;background:linear-gradient(160deg,var(--ocean),var(--navy));}
+  .mosaic-text .mosaic-label{position:static;background:none;padding:12px;}
+  .mosaic-caption{grid-column:1/-1;margin-top:4px;}
+  @media(max-width:760px){
+    .hero-mosaic{grid-template-columns:repeat(3,1fr);gap:7px;}
+    .mosaic-tile{border-radius:12px;}
+    .mosaic-label{padding:18px 6px 7px;}
+    .mosaic-label strong{font-size:0.74rem;}
+    .mosaic-label em{font-size:0.66rem;}
+  }
+
   /* ===== Vidéos de réalisations (Reels) ===== */
   .svc-videos{margin-top:34px;padding-top:28px;border-top:1px solid var(--line);}
   .reel-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,220px));gap:18px;}

@@ -86,9 +86,9 @@ export default function Reviews() {
         ))}
       </div>
       <div className="cta-row reviews-cta">
-        <button className="btn btn-cyan" type="button" data-devis-trigger>
-          Obtenir mon tarif →
-        </button>
+        <a className="btn btn-cyan" href="#services">
+          Voir toutes nos prestations →
+        </a>
         <a className="btn btn-ghost" href={GOOGLE_RATING.url} target="_blank" rel="noopener">
           Voir tous les avis Google
         </a>

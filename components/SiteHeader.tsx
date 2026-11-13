@@ -41,7 +41,7 @@ export default function SiteHeader() {
           ))}
         </nav>
         <div className="nav-right">
-          <button className="nav-cta" type="button" data-devis-trigger>Devis gratuit</button>
+          <a className="nav-cta" href="tel:0610133642">Devis gratuit</a>
           <button
             className="nav-burger"
             type="button"
