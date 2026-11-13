@@ -28,7 +28,11 @@ export default function Home() {
               </a>
             </div>
             <p className="hero-cta-note">Ou directement au <a href="tel:0610133642">06 10 13 36 42</a> — réponse en 5 minutes.</p>
-            <p className="hero-quote">« Elle est comme neuve, vraiment rien à dire. » <span>— avis client, <a href="#avis">voir les avis</a></span></p>
+            <a className="hero-google" href="#avis">
+              <span className="hero-google-stars" aria-hidden="true">★★★★★</span>
+              <strong>5,0 sur Google</strong> · 11 avis clients
+            </a>
+            <p className="hero-quote">« Le travail a été fait avec beaucoup de soin et ma voiture était nickel après son passage. » <span>— Anna M., avis Google, <a href="#avis">voir les avis</a></span></p>
           </div>
           <div className="hero-proof">
             <div className="hero-proof-frame">

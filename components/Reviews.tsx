@@ -1,6 +1,16 @@
-import { REVIEWS } from "../lib/reviews";
+import { GOOGLE_RATING, REVIEWS } from "../lib/reviews";
 
 function SourceIcon({ source }: { source: string }) {
+  if (source === "Google") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3Z" />
+        <path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22Z" />
+        <path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9.1L6.4 14Z" />
+        <path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.8 9.4 6 12 6Z" />
+      </svg>
+    );
+  }
   if (source === "Instagram") {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="#E4405F" strokeWidth="2" aria-hidden="true">
@@ -42,9 +52,15 @@ export default function Reviews() {
     <section id="avis" className="section-white">
       <div className="section-head">
         <h2 className="section-title">Ce que disent les clients</h2>
+        <a className="google-rating" href={GOOGLE_RATING.url} target="_blank" rel="noopener">
+          <SourceIcon source="Google" />
+          <span className="google-rating-score">{GOOGLE_RATING.rating}</span>
+          <span className="google-rating-stars" aria-hidden="true">★★★★★</span>
+          <span>{GOOGLE_RATING.count} avis Google</span>
+        </a>
         <p className="section-sub">
-          Des messages reçus après intervention — les originaux sont dans les
-          stories du compte{" "}
+          Avis publics de notre fiche Google, et messages reçus après
+          intervention (originaux dans les stories de{" "}
           <a
             href="https://www.instagram.com/o_mister_cleaning"
             target="_blank"
@@ -52,7 +68,7 @@ export default function Reviews() {
           >
             @o_mister_cleaning
           </a>
-          .
+          ).
         </p>
       </div>
       <div className="reviews-grid">
@@ -60,19 +76,22 @@ export default function Reviews() {
           <figure className="review-card" key={i}>
             <blockquote>{r.text}</blockquote>
             <figcaption>
-              <strong>{r.service}</strong>
+              <strong>{r.author ? `${r.author} · ${r.service}` : r.service}</strong>
               <span className="review-meta">
                 <SourceIcon source={r.source} />
-                reçu via {r.source}
+                {r.source === "Google" ? "avis Google ★★★★★" : `reçu via ${r.source}`}
               </span>
             </figcaption>
           </figure>
         ))}
       </div>
-      <div className="cta-row">
+      <div className="cta-row reviews-cta">
         <button className="btn btn-cyan" type="button" data-devis-trigger>
           Obtenir mon tarif →
         </button>
+        <a className="btn btn-ghost" href={GOOGLE_RATING.url} target="_blank" rel="noopener">
+          Voir tous les avis Google
+        </a>
       </div>
     </section>
   );

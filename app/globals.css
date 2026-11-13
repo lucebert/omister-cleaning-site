@@ -709,6 +709,18 @@
   .faq-item p a{color:var(--ocean);text-decoration:underline;}
 
   /* ===== Avis ===== */
+  .google-rating{
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    padding:8px 16px;border-radius:100px;background:#fff;border:1px solid var(--line);
+    font-size:0.9rem;font-weight:600;color:var(--navy);box-shadow:0 4px 14px rgba(8,27,51,0.06);
+  }
+  .google-rating svg{width:18px;height:18px;}
+  .google-rating-score{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.05rem;}
+  .google-rating-stars,.hero-google-stars{color:#f5b301;letter-spacing:1px;}
+  .google-rating:hover{border-color:var(--ocean);}
+  .hero-google{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:0.92rem;color:var(--navy);}
+  .hero-google strong{font-weight:700;}
+  .reviews-cta{gap:12px;flex-wrap:wrap;}
   .reviews-grid{
     max-width:1000px;margin:0 auto;display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;
