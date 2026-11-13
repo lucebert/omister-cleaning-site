@@ -112,10 +112,10 @@ export default function Home() {
       <section id="boutique" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
-          <p className="section-sub">Le nécessaire pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux interventions.</p>
+          <p className="section-sub">Le nettoyant de nos interventions, pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux passages.</p>
         </div>
 
-        <div className="shop-grid">
+        <div className="shop-grid shop-grid-single">
           <div className="shop-card flagship">
             <div className="shop-image">
               <img loading="lazy" className="shop-photo" src="/images/img-11.jpg" alt="Flacon APC Universel O'Mister Cleaning" />
@@ -123,31 +123,10 @@ export default function Home() {
             </div>
             <h3>Nettoyant APC Universel</h3>
             <p>Nettoyant tout-tissu concentré : sièges auto, tapis, matelas, canapés, sols. Le produit polyvalent que nous utilisons nous-mêmes en intervention.</p>
-            <div className="shop-price">10€ <span>/ flacon</span></div>
+            <div className="shop-price">13€ <span>/ flacon</span></div>
             <AddToCartButton productId="apc" />
           </div>
 
-          <div className="shop-card">
-            <div className="shop-image">
-              <img loading="lazy" className="shop-photo" src="/images/img-13.jpg" alt="Brosse de nettoyage O'Mister Cleaning" />
-              <div className="shop-sticker"><img loading="lazy" src="/images/img-14.png" alt="Logo O'Mister Cleaning" /></div>
-            </div>
-            <h3>Brosse de nettoyage</h3>
-            <p>Petite brosse à poils souples, pensée pour faire pénétrer le produit dans les fibres sans les abîmer.</p>
-            <div className="shop-price">5€ <span>/ unité</span></div>
-            <AddToCartButton productId="brosse" />
-          </div>
-
-          <div className="shop-card">
-            <div className="shop-image">
-              <img loading="lazy" className="shop-photo" src="/images/img-15.jpg" alt="Lingette microfibre O'Mister Cleaning" />
-              <div className="shop-sticker"><img loading="lazy" src="/images/img-16.png" alt="Logo O'Mister Cleaning" /></div>
-            </div>
-            <h3>Lingette microfibre</h3>
-            <p>Fibre d'essuyage et de finition, pour un rendu sans traces après application du produit.</p>
-            <div className="shop-price">1€ <span>/ unité</span></div>
-            <AddToCartButton productId="fibre" />
-          </div>
         </div>
 
         <p className="shop-secure">

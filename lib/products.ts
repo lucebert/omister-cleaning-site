@@ -12,22 +12,8 @@ export const PRODUCTS: Product[] = [
     id: "apc",
     name: "APC Universel",
     unit: "flacon",
-    price: 1000,
+    price: 1300,
     image: "/images/img-11.jpg",
-  },
-  {
-    id: "brosse",
-    name: "Brosse de nettoyage",
-    unit: "unité",
-    price: 500,
-    image: "/images/img-13.jpg",
-  },
-  {
-    id: "fibre",
-    name: "Lingette microfibre",
-    unit: "unité",
-    price: 100,
-    image: "/images/img-15.jpg",
   },
 ];
 

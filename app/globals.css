@@ -338,6 +338,7 @@
   }
 
   /* ===== Boutique ===== */
+  .shop-grid.shop-grid-single{grid-template-columns:minmax(0,420px);justify-content:center;}
   .shop-grid{
     max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
