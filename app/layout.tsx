@@ -62,6 +62,7 @@ export default function RootLayout({
               image: "https://www.omistercleaning.fr/images/img-12.png",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "5 rue de Bourgogne",
                 addressLocality: "Pontoise",
                 postalCode: "95300",
                 addressCountry: "FR",
@@ -77,6 +78,8 @@ export default function RootLayout({
                 { "@type": "City", name: "Conflans-Sainte-Honorine" },
               ],
               priceRange: "€€",
+              foundingDate: "2020-09-16",
+              identifier: { "@type": "PropertyValue", propertyID: "SIRET", value: "88846815400032" },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Prestations de nettoyage",

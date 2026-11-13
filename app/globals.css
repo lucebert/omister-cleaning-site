@@ -526,6 +526,7 @@
   }
   .contact-item .icon svg{width:20px;height:20px;stroke:var(--ocean);}
   .contact-item .label{font-size:0.78rem;color:var(--muted);}
+  .contact-legal{font-size:0.82rem;color:var(--muted);margin-top:2px;}
   .contact-item .value{font-weight:600;color:var(--navy);}
   .cta-panel{
     background:linear-gradient(155deg,var(--navy),var(--ocean));
@@ -672,6 +673,8 @@
   }
 
   /* ===== Footer liens & pages légales ===== */
+  .foot-trust{margin-top:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:0.82rem;color:#c9d7e4;}
+  .foot-trust span{white-space:nowrap;}
   .foot-links{margin-top:12px;display:flex;justify-content:center;gap:10px;color:#9fb3c8;}
   .foot-links a{text-decoration:underline;}
   .foot-links a:hover{color:var(--cyan);}

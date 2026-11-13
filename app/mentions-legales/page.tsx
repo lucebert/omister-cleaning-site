@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LegalHeader from "../../components/LegalHeader";
 import SiteFooter from "../../components/SiteFooter";
+import { LEGAL } from "../../lib/legal";
 
 export const metadata: Metadata = {
   title: "Mentions légales — O'Mister Cleaning",
@@ -18,16 +19,18 @@ export default function MentionsLegalesPage() {
           <h2>Éditeur du site</h2>
           <p>
             Le site omistercleaning.fr est édité par :<br />
-            <strong>O'Mister Cleaning</strong> — [À compléter : forme juridique et
-            nom du gérant]<br />
-            SIRET : [À compléter]<br />
-            Siège social : [À compléter : adresse], 95300 Pontoise<br />
+            <strong>{LEGAL.owner}</strong>, {LEGAL.form}, exerçant sous le nom
+            commercial <strong>{LEGAL.brand}</strong><br />
+            SIREN : {LEGAL.siren} — SIRET : {LEGAL.siret}<br />
+            Code APE / NAF : {LEGAL.naf}<br />
+            Immatriculée depuis le 16 septembre {LEGAL.since}<br />
+            Siège : {LEGAL.street}, {LEGAL.postalCode} {LEGAL.city}<br />
             Téléphone : <a href="tel:0610133642">06 10 13 36 42</a><br />
             Email : <a href="mailto:omister415@gmail.com">omister415@gmail.com</a>
           </p>
 
           <h2>Directeur de la publication</h2>
-          <p>[À compléter : nom du gérant]</p>
+          <p>{LEGAL.owner}</p>
 
           <h2>Hébergement</h2>
           <p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LegalHeader from "../../components/LegalHeader";
 import SiteFooter from "../../components/SiteFooter";
+import { LEGAL } from "../../lib/legal";
 
 export const metadata: Metadata = {
   title: "Conditions générales de vente — O'Mister Cleaning",
@@ -16,8 +17,10 @@ export default function CgvPage() {
           <h1 className="section-title">Conditions générales de vente</h1>
           <p>
             Les présentes conditions s'appliquent aux ventes de produits
-            d'entretien réalisées sur le site omistercleaning.fr par O'Mister
-            Cleaning ([À compléter : forme juridique], SIRET [À compléter]),
+            d'entretien réalisées sur le site omistercleaning.fr par {LEGAL.owner},{" "}
+            {LEGAL.form.toLowerCase()} exerçant sous le nom commercial O'Mister
+            Cleaning (SIRET {LEGAL.siret}, {LEGAL.street}, {LEGAL.postalCode}{" "}
+            {LEGAL.city}),
             ci-après « le Vendeur », auprès de clients particuliers.
           </p>
 
@@ -40,9 +43,8 @@ export default function CgvPage() {
           <h2>3. Livraison</h2>
           <p>
             Les commandes sont livrées en France métropolitaine à l'adresse de
-            livraison indiquée lors de la commande. Expédition sous [À compléter :
-            délai, ex. 2 à 4 jours ouvrés] via [À compléter : transporteur, ex.
-            Colissimo]. En cas de retard ou de problème de livraison, contactez le
+            livraison indiquée lors de la commande. Expédition sous 2 à 4 jours
+            ouvrés. En cas de retard ou de problème de livraison, contactez le
             Vendeur au <a href="tel:0610133642">06 10 13 36 42</a>.
           </p>
 
