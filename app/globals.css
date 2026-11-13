@@ -264,6 +264,79 @@
   }
   .offer-note{color:var(--muted);font-size:0.83rem;margin-top:10px;}
 
+
+  /* ===== Prestations en onglets (rubriques) ===== */
+  .svc{max-width:1060px;margin:0 auto;}
+  .svc-tabs{
+    display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;
+    padding:6px;margin:0 auto 28px;max-width:100%;
+    background:#fff;border:1px solid #cddfec;border-radius:18px;
+    scrollbar-width:none;
+  }
+  .svc-tabs::-webkit-scrollbar{display:none;}
+  .svc-tab{
+    flex:1 0 auto;scroll-snap-align:center;
+    display:flex;flex-direction:column;align-items:flex-start;gap:2px;
+    padding:10px 16px;border-radius:13px;border:none;background:transparent;
+    font-family:inherit;cursor:pointer;text-align:left;color:var(--navy);
+    transition:background .2s ease,color .2s ease;
+  }
+  .svc-tab:hover{background:var(--tint);}
+  .svc-tab:focus-visible{outline:3px solid var(--cyan);outline-offset:2px;}
+  .svc-tab-audience{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);}
+  .svc-tab-label{font-family:'Outfit',sans-serif;font-weight:700;font-size:0.98rem;white-space:nowrap;}
+  .svc-tab.is-active{background:var(--navy);color:#fff;}
+  .svc-tab.is-active .svc-tab-audience{color:var(--cyan);}
+
+  .svc-panel{
+    background:#fff;border:1px solid #cddfec;border-radius:22px;
+    padding:36px;box-shadow:0 10px 30px rgba(8,27,51,0.06);
+  }
+  .svc-panel[hidden]{display:none;}
+  .svc-panel-head{max-width:720px;margin-bottom:26px;}
+  .svc-panel-head h3{font-size:clamp(1.35rem,2.4vw,1.7rem);color:var(--navy);letter-spacing:-0.01em;}
+  .svc-panel-head p{color:var(--muted);margin-top:8px;font-size:0.97rem;}
+
+  .svc-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:36px;align-items:start;}
+  .svc-grid.no-media{grid-template-columns:minmax(0,1fr);}
+  .svc-h4{font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ocean);margin-bottom:10px;}
+  .svc-main .offer-items{margin-top:0;}
+  .svc-main .offer-items>div{background:var(--paper);}
+  .svc-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;}
+  .svc-grid.no-media .svc-cols{grid-template-columns:1fr 1fr;}
+  .svc-box{background:var(--tint);border-radius:16px;padding:20px 22px;}
+  .svc-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .svc-list li{position:relative;padding-left:24px;font-size:0.9rem;color:var(--ink);line-height:1.45;}
+  .svc-list li::before{
+    content:"";position:absolute;left:0;top:0.32em;width:14px;height:14px;border-radius:50%;
+    background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23081b33' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5L20 7'/%3E%3C/svg%3E") center/9px no-repeat;
+  }
+  .svc-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:10px;}
+  .svc-steps li{counter-increment:step;position:relative;padding-left:34px;font-size:0.9rem;line-height:1.45;}
+  .svc-steps li::before{
+    content:counter(step);position:absolute;left:0;top:-1px;width:24px;height:24px;border-radius:50%;
+    background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.78rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .svc-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .svc-cta .btn{border:none;cursor:pointer;font-family:inherit;}
+  .svc-cta .btn-ghost{border:1px solid var(--line);}
+  .svc-media{position:sticky;top:100px;}
+  .svc-media .compare{border-radius:18px;overflow:hidden;}
+  .svc-media-caption{text-align:center;color:var(--muted);font-size:0.84rem;margin-top:10px;}
+
+  @media(max-width:900px){
+    .svc-grid{grid-template-columns:minmax(0,1fr);}
+    .svc-media{position:static;order:-1;}
+  }
+  @media(max-width:640px){
+    .svc-tabs{border-radius:16px;margin-left:-8px;margin-right:-8px;}
+    .svc-tab{flex:0 0 auto;padding:9px 14px;}
+    .svc-panel{padding:22px 18px;border-radius:18px;}
+    .svc-cols,.svc-grid.no-media .svc-cols{grid-template-columns:1fr;}
+    .svc-cta .btn{width:100%;justify-content:center;}
+  }
+
   /* ===== Boutique ===== */
   .shop-grid{
     max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
