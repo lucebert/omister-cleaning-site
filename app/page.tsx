@@ -50,6 +50,19 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="pro-strip" aria-label="Offres professionnelles">
+        <div className="pro-strip-inner">
+          <p className="pro-strip-title">Vous êtes un professionnel ?</p>
+          <nav className="pro-strip-links">
+            <a href="#prestations-restaurants-hotels">Restaurants &amp; hôtels</a>
+            <a href="#prestations-agences-syndics">Agences &amp; syndics</a>
+            <a href="#prestations-garages">Garages &amp; concessions</a>
+            <a href="#prestations-sols-locaux">Bureaux &amp; locaux</a>
+          </nav>
+        </div>
+      </section>
+
       <section id="services" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Prestations & tarifs</h2>
@@ -249,6 +262,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <a className="call-fab" href="tel:0610133642" aria-label="Appeler O'Mister Cleaning au 06 10 13 36 42">
+        <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 12.9 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Appeler
+      </a>
 
       <SiteFooter />
     </>

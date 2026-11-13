@@ -25,8 +25,16 @@ export type ServiceTab = {
     label: string;
     caption: string;
   };
+  /** Vidéos de vraies interventions (public/videos), format vertical */
+  videos?: { src: string; poster: string; title: string }[];
   cta: "devis" | "phone";
 };
+
+const V = (slug: string, title: string) => ({
+  src: `/videos/${slug}.mp4`,
+  poster: `/videos/${slug}.jpg`,
+  title,
+});
 
 export const SERVICE_TABS: ServiceTab[] = [
   {
@@ -67,6 +75,7 @@ export const SERVICE_TABS: ServiceTab[] = [
       label: "Comparer avant et après - banquette de voiture",
       caption: "Banquette arrière, vraie intervention.",
     },
+    videos: [V("01-voiture-touran", "Touran : intérieur très encrassé remis à neuf"), V("04-peugeot-cuir", "Peugeot : intérieur cuir, avant / après"), V("05-satisfying-extraction", "Injection-extraction : la couleur de l'eau")],
     cta: "devis",
   },
   {
@@ -107,6 +116,7 @@ export const SERVICE_TABS: ServiceTab[] = [
       label: "Comparer avant et après - canapé d'angle",
       caption: "Canapé d'angle, vraie intervention.",
     },
+    videos: [V("03-canape-angle", "Canapé d'angle : aspiration, shampoing, extraction"), V("05-satisfying-extraction", "Injection-extraction : tout ce qui sort du tissu")],
     cta: "phone",
   },
   {
@@ -146,6 +156,7 @@ export const SERVICE_TABS: ServiceTab[] = [
       label: "Comparer avant et après - assise en tissu",
       caption: "Assise en tissu, vraie intervention.",
     },
+    videos: [V("02-moquette-monobrosse", "Grande moquette : aspiration puis monobrosse")],
     cta: "phone",
   },
   {
@@ -235,6 +246,7 @@ export const SERVICE_TABS: ServiceTab[] = [
       "Devis au m², prix annoncé = prix payé",
       "Intervention sur le créneau convenu",
     ],
+    videos: [V("02-moquette-monobrosse", "Grande moquette : aspiration puis monobrosse")],
     cta: "phone",
   },
   {

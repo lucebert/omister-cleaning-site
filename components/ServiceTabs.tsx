@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import CompareCard from "./CompareCard";
+import VideoReel from "./VideoReel";
 import { SERVICE_TABS } from "../lib/services";
 
 const HASH_PREFIX = "prestations-";
@@ -158,6 +159,17 @@ export default function ServiceTabs() {
               </div>
             ) : null}
           </div>
+
+          {tab.videos?.length ? (
+            <div className="svc-videos">
+              <h4 className="svc-h4">Nos réalisations en vidéo</h4>
+              <div className="reel-row">
+                {tab.videos.map((v) => (
+                  <VideoReel key={v.src} src={v.src} poster={v.poster} title={v.title} />
+                ))}
+              </div>
+            </div>
+          ) : null}
         </section>
       ))}
     </div>

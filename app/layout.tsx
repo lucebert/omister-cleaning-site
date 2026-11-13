@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://omistercleaning.fr"),
   alternates: { canonical: "/" },
   title:
-    "O'Mister Cleaning — Nettoyage intérieur voiture à domicile en Île-de-France",
+    "O'Mister Cleaning — Nettoyage voiture, canapé, moquette à domicile | Pontoise, Cergy, Val-d'Oise",
   description:
-    "Sièges, moquettes, plastiques, odeurs : l'intérieur de votre voiture rendu comme neuf, chez vous, partout en Île-de-France. À partir de 30€ — devis en 5 minutes au 06 10 13 36 42.",
+    "Nettoyage intérieur de voiture, canapés, matelas, moquettes et sols, chez vous ou dans vos locaux. Particuliers et pros (restaurants, hôtels, agences, garages) à Pontoise, Cergy et dans toute l'Île-de-France. Dès 30€, devis gratuit au 06 10 13 36 42.",
 };
 
 export default function RootLayout({
@@ -23,11 +23,11 @@ export default function RootLayout({
       <head>
         <meta
           property="og:title"
-          content="O'Mister Cleaning — Votre voiture rendue comme neuve"
+          content="O'Mister Cleaning — Nettoyage voiture, canapé et moquette en Île-de-France"
         />
         <meta
           property="og:description"
-          content="Nettoyage automobile professionnel en profondeur, chez vous, partout en Île-de-France. À partir de 30€, devis en 5 minutes."
+          content="Voitures, canapés, matelas, moquettes, sols : nettoyage en profondeur chez vous ou dans vos locaux, partout en Île-de-France. Dès 30€, devis gratuit sur photo."
         />
         <meta property="og:type" content="business.business" />
         <meta
@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "O'Mister Cleaning",
               description:
-                "Nettoyage automobile à domicile (sièges, moquettes, plastiques, odeurs), mobilier et habitation, et location de camion utilitaire, à Pontoise et en Île-de-France.",
+                "Nettoyage à domicile et en entreprise : intérieur de voiture, canapés, matelas, tapis, moquettes et sols ; restaurants, hôtels, agences immobilières et garages ; location de camion utilitaire. Basé à Pontoise, intervention dans toute l'Île-de-France.",
               telephone: "+33610133642",
               email: "omister415@gmail.com",
               url: "https://www.omistercleaning.fr",
@@ -66,8 +66,41 @@ export default function RootLayout({
                 postalCode: "95300",
                 addressCountry: "FR",
               },
-              areaServed: "Île-de-France",
+              areaServed: [
+                { "@type": "AdministrativeArea", name: "Île-de-France" },
+                { "@type": "AdministrativeArea", name: "Val-d'Oise" },
+                { "@type": "City", name: "Pontoise" },
+                { "@type": "City", name: "Cergy" },
+                { "@type": "City", name: "Saint-Ouen-l'Aumône" },
+                { "@type": "City", name: "Osny" },
+                { "@type": "City", name: "Éragny" },
+                { "@type": "City", name: "Conflans-Sainte-Honorine" },
+              ],
               priceRange: "€€",
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Prestations de nettoyage",
+                itemListElement: [
+                  ["Nettoyage intérieur voiture (formule Express)", 30],
+                  ["Nettoyage intérieur voiture (formule Intégrale)", 50],
+                  ["Nettoyage voiture intérieur + extérieur", 80],
+                  ["Nettoyage de siège", 10],
+                  ["Nettoyage de fauteuil", 30],
+                  ["Nettoyage de tapis", 20],
+                  ["Nettoyage de canapé 2/3 places", 70],
+                  ["Nettoyage de canapé d'angle", 90],
+                  ["Remise en propreté de logement (studio)", 130],
+                  ["Location de camion utilitaire sans chauffeur", 100],
+                ].map(([name, price]) => ({
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name },
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    minPrice: price,
+                    priceCurrency: "EUR",
+                  },
+                })),
+              },
               sameAs: ["https://www.instagram.com/o_mister_cleaning"],
             }),
           }}
