@@ -2,6 +2,7 @@ import CompareCard from "../components/CompareCard";
 import SiteHeader from "../components/SiteHeader";
 import Reviews from "../components/Reviews";
 import DevisSimulator from "../components/DevisSimulator";
+import ServiceTabs from "../components/ServiceTabs";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
 import SiteFooter from "../components/SiteFooter";
@@ -52,70 +53,9 @@ export default function Home() {
       <section id="services" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Prestations & tarifs</h2>
-          <p className="section-sub">Trois domaines de nettoyage, plus la location de camion utilitaire. Tous les prix sont des prix de départ « à partir de », ajustés selon l'état, la taille et la complexité.</p>
+          <p className="section-sub">Choisissez votre rubrique : particuliers ou professionnels, chaque prestation est détaillée avec ses tarifs. Les prix « à partir de » sont ajustés selon l'état, la taille et la complexité — le prix du devis est le prix final.</p>
         </div>
-        <div className="offers">
-
-          <article className="offer">
-            <div className="offer-head">
-              <h3>Nettoyage automobile</h3>
-            </div>
-            <p className="offer-desc">Trois formules selon le niveau de nettoyage recherché.</p>
-            <dl className="offer-items">
-              <div><dt>Formule Express</dt><dd>Aspiration complète des moquettes, sièges et plastiques.</dd><dd className="offer-row-price">À partir de 30€</dd></div>
-              <div><dt>Formule Intégrale</dt><dd>Brossage mécanique, shampouineuse tissus/moquettes, plastiques et vitres.</dd><dd className="offer-row-price">À partir de 50€</dd></div>
-              <div><dt>Sièges seuls</dt><dd>Nettoyage en profondeur, taches et odeurs éliminées.</dd><dd className="offer-row-price">À partir de 10€/siège</dd></div>
-            </dl>
-            <p className="offer-note">Véhicules très sales ou familiaux : devis personnalisé.</p>
-          </article>
-
-          <article className="offer">
-            <div className="offer-head">
-              <h3>Mobilier & textiles</h3>
-            </div>
-            <p className="offer-desc">Nettoyage en profondeur à la shampouineuse professionnelle — taches, bactéries, acariens et odeurs éliminés.</p>
-            <dl className="offer-items">
-              <div><dt>Fauteuil</dt><dd className="offer-row-price">À partir de 30€</dd></div>
-              <div><dt>Tapis</dt><dd>Selon la taille.</dd><dd className="offer-row-price">À partir de 20€</dd></div>
-              <div><dt>Matelas</dt><dd>Devis personnalisé selon la taille.</dd><dd className="offer-row-price">Sur devis</dd></div>
-              <div><dt>Canapé 2/3 places</dt><dd className="offer-row-price">À partir de 70€</dd></div>
-              <div><dt>Canapé d'angle</dt><dd className="offer-row-price">À partir de 90€</dd></div>
-              <div><dt>Canapé 5 places et +</dt><dd className="offer-row-price">À partir de 100€</dd></div>
-            </dl>
-          </article>
-
-          <article className="offer">
-            <div className="offer-head">
-              <h3>Habitation & professionnels</h3>
-              <span className="offer-price">Sur devis</span>
-            </div>
-            <p className="offer-desc">Sols et surfaces traités à la monobrosse professionnelle.</p>
-            <dl className="offer-items">
-              <div><dt>Décapage</dt><dd>Retrait des couches de saleté incrustée et anciens traitements.</dd></div>
-              <div><dt>Lustrage</dt><dd>Brillance et finition nette redonnées au sol.</dd></div>
-              <div><dt>Récurage</dt><dd>Nettoyage en profondeur des sols très encrassés.</dd></div>
-            </dl>
-            <p className="offer-note">Terrasse, commerce, maison ou grandes surfaces moquette : devis selon la surface.</p>
-          </article>
-
-          <article className="offer">
-            <div className="offer-head">
-              <h3>Location de camions utilitaires</h3>
-            </div>
-            <p className="offer-desc">Pour transporter, pas seulement nettoyer : déménagements, achats en magasin (IKEA, Conforama...), meubles volumineux.</p>
-            <dl className="offer-items">
-              <div><dt>Sans chauffeur</dt><dd>Vous conduisez vous-même, formule la plus économique.</dd><dd className="offer-row-price">À partir de 100€</dd></div>
-              <div><dt>Avec chauffeur</dt><dd>On s'occupe de la conduite et du transport, en toute sécurité.</dd><dd className="offer-row-price">Sur devis</dd></div>
-            </dl>
-            <p className="offer-note">Tarif selon durée, kilométrage et créneau souhaité.</p>
-          </article>
-
-        </div>
-        <div className="cta-row">
-          <button className="btn btn-cyan" type="button" data-devis-trigger>
-            Obtenir mon tarif →
-          </button>
-        </div>
+        <ServiceTabs />
       </section>
 
       <section id="avant-apres" className="section-dark">
@@ -172,10 +112,10 @@ export default function Home() {
       <section id="boutique" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
-          <p className="section-sub">Le nécessaire pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux interventions.</p>
+          <p className="section-sub">Le nettoyant de nos interventions, pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux passages.</p>
         </div>
 
-        <div className="shop-grid">
+        <div className="shop-grid shop-grid-single">
           <div className="shop-card flagship">
             <div className="shop-image">
               <img loading="lazy" className="shop-photo" src="/images/img-11.jpg" alt="Flacon APC Universel O'Mister Cleaning" />
@@ -183,31 +123,10 @@ export default function Home() {
             </div>
             <h3>Nettoyant APC Universel</h3>
             <p>Nettoyant tout-tissu concentré : sièges auto, tapis, matelas, canapés, sols. Le produit polyvalent que nous utilisons nous-mêmes en intervention.</p>
-            <div className="shop-price">10€ <span>/ flacon</span></div>
+            <div className="shop-price">13€ <span>/ flacon</span></div>
             <AddToCartButton productId="apc" />
           </div>
 
-          <div className="shop-card">
-            <div className="shop-image">
-              <img loading="lazy" className="shop-photo" src="/images/img-13.jpg" alt="Brosse de nettoyage O'Mister Cleaning" />
-              <div className="shop-sticker"><img loading="lazy" src="/images/img-14.png" alt="Logo O'Mister Cleaning" /></div>
-            </div>
-            <h3>Brosse de nettoyage</h3>
-            <p>Petite brosse à poils souples, pensée pour faire pénétrer le produit dans les fibres sans les abîmer.</p>
-            <div className="shop-price">5€ <span>/ unité</span></div>
-            <AddToCartButton productId="brosse" />
-          </div>
-
-          <div className="shop-card">
-            <div className="shop-image">
-              <img loading="lazy" className="shop-photo" src="/images/img-15.jpg" alt="Lingette microfibre O'Mister Cleaning" />
-              <div className="shop-sticker"><img loading="lazy" src="/images/img-16.png" alt="Logo O'Mister Cleaning" /></div>
-            </div>
-            <h3>Lingette microfibre</h3>
-            <p>Fibre d'essuyage et de finition, pour un rendu sans traces après application du produit.</p>
-            <div className="shop-price">1€ <span>/ unité</span></div>
-            <AddToCartButton productId="fibre" />
-          </div>
         </div>
 
         <p className="shop-secure">

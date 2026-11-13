@@ -1,5 +1,7 @@
 "use client";
 
+import { getProduct } from "../../lib/products";
+
 import {
   createContext,
   useCallback,
@@ -40,7 +42,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           setItems(
             parsed.filter(
               (i) =>
-                i && typeof i.id === "string" && Number.isInteger(i.qty) && i.qty > 0
+                i && typeof i.id === "string" && Number.isInteger(i.qty) && i.qty > 0 && !!getProduct(i.id)
             )
           );
         }

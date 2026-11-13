@@ -20,6 +20,12 @@ export const SERVICES = [
     base: 50,
   },
   {
+    id: "complet",
+    label: "Intérieur + extérieur",
+    desc: "Intérieur complet + lavage extérieur (80€ à 130€)",
+    base: 80,
+  },
+  {
     id: "express",
     label: "Coup de propre",
     desc: "Aspiration complète moquettes, sièges et plastiques",
@@ -57,8 +63,10 @@ export function estimate(
   const vehicle = VEHICLES.find((v) => v.id === vehicleId);
   const condition = CONDITIONS.find((c) => c.id === conditionId);
   const base = service?.base ?? 50;
+  const total = base + (vehicle?.mod ?? 0) + (condition?.mod ?? 0);
   return {
     kind: "fixed",
-    from: base + (vehicle?.mod ?? 0) + (condition?.mod ?? 0),
+    // Intérieur + extérieur : fourchette annoncée 80€ à 130€
+    from: serviceId === "complet" ? Math.min(total, 130) : total,
   };
 }
