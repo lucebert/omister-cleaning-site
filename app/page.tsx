@@ -111,7 +111,7 @@ export default function Home() {
 
       <section id="boutique" className="section-tint">
         <div className="section-head">
-          <h2 className="section-title">Les produits qu'on utilise en intervention</h2>
+          <h2 className="section-title">Le produit qu'on utilise en intervention</h2>
           <p className="section-sub">Le nettoyant de nos interventions, pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux passages.</p>
         </div>
 

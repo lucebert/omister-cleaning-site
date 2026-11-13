@@ -283,6 +283,7 @@
   }
   .svc-tab:hover{background:var(--tint);}
   .svc-tab:focus-visible{outline:3px solid var(--cyan);outline-offset:2px;}
+  @media(min-width:901px){ .svc-tabs{flex-wrap:wrap;overflow:visible;} .svc-tab{flex:1 1 auto;} }
   .svc-tab-audience{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);}
   .svc-tab-label{font-family:'Outfit',sans-serif;font-weight:700;font-size:0.98rem;white-space:nowrap;}
   .svc-tab.is-active{background:var(--navy);color:#fff;}
