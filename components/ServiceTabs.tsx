@@ -16,7 +16,9 @@ export default function ServiceTabs() {
     const syncFromHash = () => {
       const hash = window.location.hash.replace("#", "");
       if (!hash.startsWith(HASH_PREFIX)) return;
-      const id = hash.slice(HASH_PREFIX.length);
+      let id = hash.slice(HASH_PREFIX.length);
+      // Ancien lien (avant la séparation agences / syndics)
+      if (id === "agences-syndics") id = "agences-immobilieres";
       if (SERVICE_TABS.some((t) => t.id === id)) {
         setActive(id);
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });

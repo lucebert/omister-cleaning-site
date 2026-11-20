@@ -17,8 +17,8 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <h1 className="hero-title">Voitures, canapés, moquettes, locaux : tout redevient <span className="accent">comme neuf</span>.</h1>
-            <p className="hero-sub">Nettoyage professionnel en profondeur, chez vous ou dans vos locaux, pour les particuliers comme pour les pros : restaurants, hôtels, agences immobilières, garages, autocars. Partout en Île-de-France.</p>
+            <h1 className="hero-title">Logements, canapés, locaux, voitures : tout redevient <span className="accent">comme neuf</span>.</h1>
+            <p className="hero-sub">Nettoyage professionnel en profondeur, chez vous ou dans vos locaux, pour les particuliers comme pour les pros : agences immobilières, syndics de copropriété, restaurants, hôtels, bureaux, garages. Partout en Île-de-France.</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#services">
                 Voir toutes nos prestations →
@@ -37,12 +37,12 @@ export default function Home() {
           </div>
           <div className="hero-mosaic" aria-label="Nos métiers">
             {[
-              { href: "#prestations-automobile", img: "/images/img-05.jpg", alt: "Banquette de voiture après nettoyage", label: "Voitures", sub: "dès 30€" },
               { href: "#prestations-textiles", img: "/images/img-09.jpg", alt: "Canapé d'angle après nettoyage", label: "Canapés · matelas · tapis", sub: "dès 20€" },
+              { href: "#prestations-agences-immobilieres", img: "/videos/07-wc-moisissures.jpg", alt: "WC envahis de moisissures avant remise en état", label: "Agences immobilières", sub: "logement prêt sous 72 h" },
+              { href: "#prestations-syndics-coproprietes", img: "/videos/08-balcon-demoussage.jpg", alt: "Balcon couvert de mousse avant nettoyage", label: "Syndics & copropriétés", sub: "parties communes" },
               { href: "#prestations-restaurants-hotels", img: "/images/tile-restaurant.jpg", alt: "Nettoyage d'un fauteuil de restaurant", label: "Restaurants & hôtels", sub: "pros" },
-              { href: "#prestations-sols-locaux", img: "/images/tile-moquette.jpg", alt: "Moquette nettoyée à la monobrosse", label: "Moquettes & sols", sub: "devis au m²" },
-              { href: "#prestations-automobile", img: "/images/tile-autocar.jpg", alt: "Sièges d'autocar nettoyés", label: "Autocars & flottes", sub: "pros" },
-              { href: "#prestations-agences-syndics", img: "", alt: "", label: "Agences & syndics", sub: "logement prêt sous 72 h" },
+              { href: "#prestations-sols-locaux", img: "/images/tile-moquette.jpg", alt: "Moquette nettoyée à la monobrosse", label: "Bureaux, sols & moquettes", sub: "devis au m²" },
+              { href: "#prestations-automobile", img: "/images/img-05.jpg", alt: "Banquette de voiture après nettoyage", label: "Voitures & flottes", sub: "dès 30€" },
             ].map((tile) => (
               <a key={tile.label} className={`mosaic-tile${tile.img ? "" : " mosaic-text"}`} href={tile.href}>
                 {tile.img ? <img src={tile.img} alt={tile.alt} loading="eager" /> : null}
@@ -63,7 +63,8 @@ export default function Home() {
           <p className="pro-strip-title">Vous êtes un professionnel ?</p>
           <nav className="pro-strip-links">
             <a href="#prestations-restaurants-hotels">Restaurants &amp; hôtels</a>
-            <a href="#prestations-agences-syndics">Agences &amp; syndics</a>
+            <a href="#prestations-agences-immobilieres">Agences immobilières</a>
+            <a href="#prestations-syndics-coproprietes">Syndics &amp; copropriétés</a>
             <a href="#prestations-garages">Garages &amp; concessions</a>
             <a href="#prestations-sols-locaux">Bureaux &amp; locaux</a>
           </nav>
