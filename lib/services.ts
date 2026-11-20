@@ -39,11 +39,11 @@ const V = (slug: string, title: string) => ({
 export const SERVICE_TABS: ServiceTab[] = [
   {
     id: "textiles",
-    label: "Canapés & textiles",
+    label: "Canapés, matelas & tapis",
     audience: "Particuliers",
     title: "Canapés, matelas & textiles",
     intro:
-      "Nettoyage en profondeur à la shampouineuse professionnelle, directement chez vous : taches, bactéries, acariens et odeurs éliminés.",
+      "Pour les particuliers : canapés en tissu, fauteuils, matelas, tapis et moquettes nettoyés en profondeur à l'injecteur-extracteur, directement chez vous. Taches, auréoles, acariens, bactéries et odeurs sont éliminés au cœur des fibres.",
     prices: [
       { name: "Fauteuil", price: "À partir de 30€" },
       { name: "Tapis", detail: "Selon la taille.", price: "À partir de 20€" },
@@ -193,16 +193,18 @@ export const SERVICE_TABS: ServiceTab[] = [
   },
   {
     id: "sols-locaux",
-    label: "Sols & locaux",
+    label: "Bureaux, sols & moquettes",
     audience: "Particuliers & pros",
-    title: "Sols, locaux & grandes surfaces",
+    title: "Bureaux, commerces, sols & grandes surfaces",
     intro:
-      "Sols et surfaces traités à la monobrosse professionnelle : maisons, commerces, bureaux, terrasses et grandes surfaces de moquette.",
+      "Nettoyage de bureaux et de commerces, ponctuel ou régulier, et traitement des sols à la monobrosse professionnelle : carrelage, lino, parquet vitrifié, moquettes de grandes surfaces, terrasses. Pour les particuliers comme pour les entreprises.",
     prices: [
       { name: "Décapage", detail: "Retrait des couches de saleté incrustée et des anciens traitements.", price: "Devis au m²" },
       { name: "Lustrage", detail: "Brillance et finition nette redonnées au sol.", price: "Devis au m²" },
       { name: "Récurage", detail: "Nettoyage en profondeur des sols très encrassés.", price: "Devis au m²" },
       { name: "Moquettes grandes surfaces", detail: "Bureaux, salles, couloirs.", price: "Devis au m²" },
+      { name: "Entretien de bureaux et commerces", detail: "Passage régulier (hebdomadaire ou mensuel) ou nettoyage ponctuel : sols, sanitaires, poussières, vitres accessibles.", price: "Sur devis" },
+      { name: "Terrasses et extérieurs", detail: "Démoussage et lavage haute pression.", price: "Devis au m²" },
     ],
     included: {
       title: "Où on intervient",
@@ -218,11 +220,11 @@ export const SERVICE_TABS: ServiceTab[] = [
   },
   {
     id: "automobile",
-    label: "Automobile",
+    label: "Voitures & flottes",
     audience: "Particuliers & pros",
     title: "Nettoyage automobile",
     intro:
-      "On vient chez vous ou sur votre lieu de travail, partout en Île-de-France. Sièges, moquettes, plastiques et odeurs : l'intérieur retrouve son aspect d'origine.",
+      "Nettoyage intérieur et extérieur de voitures, utilitaires, autocars et flottes d'entreprise, chez vous ou sur votre lieu de travail, partout en Île-de-France. Sièges, moquettes, plastiques et odeurs : l'intérieur retrouve son aspect d'origine.",
     prices: [
       { name: "Formule Express", detail: "Aspiration complète des moquettes, sièges et plastiques.", price: "À partir de 30€" },
       { name: "Formule Intégrale", detail: "Brossage mécanique, shampouineuse tissus et moquettes, plastiques et vitres.", price: "À partir de 50€" },

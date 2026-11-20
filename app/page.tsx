@@ -74,7 +74,7 @@ export default function Home() {
       <section id="services" className="section-tint">
         <div className="section-head">
           <h2 className="section-title">Prestations & tarifs</h2>
-          <p className="section-sub">Choisissez votre rubrique : particuliers ou professionnels, chaque prestation est détaillée avec ses tarifs. Les prix « à partir de » sont ajustés selon l'état, la taille et la complexité — le prix du devis est le prix final.</p>
+          <p className="section-sub">Nous ne faisons pas que les voitures : canapés, matelas, tapis, logements à remettre en état, parties communes d'immeubles, restaurants, bureaux, sols et moquettes. Choisissez votre rubrique ci-dessous : chaque prestation est détaillée, avec ce qui est inclus et ses tarifs. Les prix « à partir de » sont ajustés selon l'état, la taille et la complexité ; le prix du devis est le prix final.</p>
         </div>
         <ServiceTabs />
       </section>
