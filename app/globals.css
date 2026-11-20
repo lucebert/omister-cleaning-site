@@ -404,10 +404,12 @@
 
   /* ===== Boutique ===== */
   .shop-grid.shop-grid-single{grid-template-columns:minmax(0,420px);justify-content:center;}
+  .shop-grid.shop-grid-duo{grid-template-columns:minmax(0,420px) minmax(0,320px);justify-content:center;align-items:start;}
+  .shop-video{width:100%;max-width:320px;justify-self:center;}
   .shop-grid{
     max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
-  @media(max-width:860px){ .shop-grid{grid-template-columns:1fr;} }
+  @media(max-width:860px){ .shop-grid, .shop-grid.shop-grid-duo{grid-template-columns:1fr;} }
   .shop-card{
     background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 26px;
     display:flex;flex-direction:column;gap:14px;transition:transform .2s ease, box-shadow .2s ease;

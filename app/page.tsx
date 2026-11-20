@@ -3,6 +3,7 @@ import SiteHeader from "../components/SiteHeader";
 import Reviews from "../components/Reviews";
 import DevisSimulator from "../components/DevisSimulator";
 import ServiceTabs from "../components/ServiceTabs";
+import VideoReel from "../components/VideoReel";
 import { LEGAL } from "../lib/legal";
 import AddToCartButton from "../components/cart/AddToCartButton";
 import PaymentLogos from "../components/PaymentLogos";
@@ -136,7 +137,7 @@ export default function Home() {
           <p className="section-sub">Le nettoyant de nos interventions, pour entretenir vous-même sièges auto, tapis, matelas, canapés et sols entre deux passages.</p>
         </div>
 
-        <div className="shop-grid shop-grid-single">
+        <div className="shop-grid shop-grid-duo">
           <div className="shop-card flagship">
             <div className="shop-image">
               <img loading="lazy" className="shop-photo" src="/images/img-11.jpg" alt="Flacon APC Universel O'Mister Cleaning" />
@@ -146,6 +147,9 @@ export default function Home() {
             <p>Nettoyant tout-tissu concentré : sièges auto, tapis, matelas, canapés, sols. Le produit polyvalent que nous utilisons nous-mêmes en intervention.</p>
             <div className="shop-price">13€ <span>/ flacon</span></div>
             <AddToCartButton productId="apc" />
+          </div>
+          <div className="shop-video">
+            <VideoReel src="/videos/09-apc-universel-taches.mp4" poster="/videos/09-apc-universel-taches.jpg" title="Le Nettoyant APC Universel en action : matelas, tapis, canapé (vraies taches, vrai résultat)" />
           </div>
 
         </div>
