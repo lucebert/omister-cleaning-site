@@ -25,6 +25,8 @@ export type ServiceTab = {
     label: string;
     caption: string;
   };
+  /** Photos réelles (ex. le véhicule de location) */
+  photos?: { src: string; alt: string; caption: string }[];
   /** Vidéos de vraies interventions (public/videos), format vertical */
   videos?: { src: string; poster: string; title: string }[];
   cta: "devis" | "phone";
@@ -296,7 +298,7 @@ export const SERVICE_TABS: ServiceTab[] = [
     audience: "Particuliers & pros",
     title: "Location de camions utilitaires",
     intro:
-      "Pour transporter, pas seulement nettoyer : déménagements, achats en magasin, meubles volumineux, encombrants.",
+      "Location de notre camion utilitaire (Renault Master fourgon), avec ou sans chauffeur : déménagements, achats en magasin, meubles volumineux, évacuation d'encombrants.",
     prices: [
       { name: "Sans chauffeur", detail: "Vous conduisez vous-même, formule la plus économique.", price: "À partir de 100€" },
       { name: "Avec chauffeur", detail: "On s'occupe de la conduite et du transport.", price: "Sur devis" },
@@ -307,6 +309,11 @@ export const SERVICE_TABS: ServiceTab[] = [
       items: ["Déménagement", "Achats en magasin (meubles, électroménager)", "Meubles volumineux", "Évacuation d'encombrants"],
     },
     steps: ["Indiquez la date, la durée et le trajet", "Devis et réservation avec acompte", "Prise en charge du véhicule ou du transport"],
+    photos: [
+      { src: "/images/camion-exterieur.jpg", alt: "Camion utilitaire Renault Master bleu d'O'Mister Cleaning, vue de face", caption: "Notre utilitaire : Renault Master fourgon" },
+      { src: "/images/camion-interieur.jpg", alt: "Espace de chargement vide du camion utilitaire", caption: "Grand espace de chargement" },
+      { src: "/images/camion-charge.jpg", alt: "Camion utilitaire chargé de meubles et de cartons", caption: "Meubles, cartons, électroménager : ça rentre" },
+    ],
     cta: "phone",
   },
 ];

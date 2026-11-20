@@ -162,6 +162,20 @@ export default function ServiceTabs() {
             ) : null}
           </div>
 
+          {tab.photos?.length ? (
+            <div className="svc-videos">
+              <h4 className="svc-h4">En photos</h4>
+              <div className="svc-photos">
+                {tab.photos.map((ph) => (
+                  <figure key={ph.src} className="svc-photo">
+                    <img src={ph.src} alt={ph.alt} loading="lazy" />
+                    <figcaption>{ph.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           {tab.videos?.length ? (
             <div className="svc-videos">
               <h4 className="svc-h4">Nos réalisations en vidéo</h4>

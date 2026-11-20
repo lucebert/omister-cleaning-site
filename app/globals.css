@@ -362,6 +362,11 @@
 
   /* ===== Vidéos de réalisations (Reels) ===== */
   .svc-videos{margin-top:34px;padding-top:28px;border-top:1px solid var(--line);}
+  .svc-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+  .svc-photo{margin:0;}
+  .svc-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block;}
+  .svc-photo figcaption{font-size:0.85rem;color:var(--muted);margin-top:6px;text-align:center;}
+  @media(max-width:700px){ .svc-photos{grid-template-columns:1fr 1fr;} }
   .reel-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,220px));gap:18px;}
   .reel{margin:0;}
   .reel-frame{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:var(--navy);box-shadow:0 10px 24px rgba(8,27,51,0.18);}
