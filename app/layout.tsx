@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://omistercleaning.fr"),
   alternates: { canonical: "/" },
   title:
-    "O'Mister Cleaning — Nettoyage voiture, canapé, moquette à domicile | Pontoise, Cergy, Val-d'Oise",
+    "O'Mister Cleaning — Entreprise de nettoyage : logements, canapés, bureaux, copropriétés, voitures | Pontoise, Val-d'Oise",
   description:
-    "Nettoyage intérieur de voiture, canapés, matelas, moquettes et sols, chez vous ou dans vos locaux. Particuliers et pros (restaurants, hôtels, agences, garages) à Pontoise, Cergy et dans toute l'Île-de-France. Dès 30€, devis gratuit au 06 10 13 36 42.",
+    "Tout type de nettoyage à Pontoise, Cergy et en Île-de-France : canapés, matelas, tapis, remise en état de logements pour agences immobilières, parties communes pour syndics, restaurants, bureaux, sols, voitures. Particuliers et pros, devis gratuit au 06 10 13 36 42.",
 };
 
 export default function RootLayout({
@@ -23,11 +23,11 @@ export default function RootLayout({
       <head>
         <meta
           property="og:title"
-          content="O'Mister Cleaning — Nettoyage voiture, canapé et moquette en Île-de-France"
+          content="O'Mister Cleaning — Tout type de nettoyage en Île-de-France"
         />
         <meta
           property="og:description"
-          content="Voitures, canapés, matelas, moquettes, sols : nettoyage en profondeur chez vous ou dans vos locaux, partout en Île-de-France. Dès 30€, devis gratuit sur photo."
+          content="Logements, canapés, matelas, parties communes, bureaux, restaurants, sols, voitures : nettoyage en profondeur pour particuliers et pros, partout en Île-de-France. Devis gratuit sur photo."
         />
         <meta property="og:type" content="business.business" />
         <meta
@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "O'Mister Cleaning",
               description:
-                "Nettoyage à domicile et en entreprise : intérieur de voiture, canapés, matelas, tapis, moquettes et sols ; restaurants, hôtels, agences immobilières et garages ; location de camion utilitaire. Basé à Pontoise, intervention dans toute l'Île-de-France.",
+                "Nettoyage à domicile et en entreprise : intérieur de voiture, canapés, matelas, tapis, moquettes et sols ; remise en état de logements pour agences immobilières, parties communes pour syndics et bailleurs, bureaux et commerces, restaurants, hôtels et garages ; location de camion utilitaire. Basé à Pontoise, intervention dans toute l'Île-de-France.",
               telephone: "+33610133642",
               email: "omister415@gmail.com",
               url: "https://www.omistercleaning.fr",
